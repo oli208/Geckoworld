@@ -1,34 +1,541 @@
+/* ---------------------------------------------------------------------------
+
+Minimal Theme by @oli208
+
+User interface replacement for Obsidian.
+
+Designed to be used with the Hider plugin.
+
+Readme:
+https://github.com/kepano/geckoworld
+
+-----------------------------------------------------------------------------
+
+MIT License
+
+Copyright (c) 2020-2023 Oliver Schappacher (@oli208)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in 
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+*/
+
+
+/***** TABLE OF CONTENTS *****/
+/*
+Foundations 
+- Typotgraphy
+- Colors
+- Borders
+- Radiuses
+- Spacing
+
+Components
+- Button
+- Checkbox
+- Indentation guides
+- Tabs
+
+Editor
+- Block
+- Blockquote
+- Callout
+- Code
+- Embed
+- Footnote
+- Headings
+- Horizontal rule
+- Link
+- List
+- Properties
+- Table
+
+Plugins
+- Graph
+
+Window
+- Divider
+- Ribbon
+- Scrollbar
+
+*/
+
+/* Foundations */ 
+/* Typography */
+
+@font-face {
+    font-family: "iA Writer QuattroV";
+
+    src: url("fonts/iAWriterQuattroS-Regular.eot") format("embedded-opentype"),
+      url("fonts/iAWriterQuattroS-Regular.woff2") format("woff2"),
+      url("fonts/iAWriterQuattroS-Regular.woff") format("woff"),
+      url("iAWriterQuattroV.ttf") format('truetype');
+  }
+
+/* Colors */
+:root {
+	/*default accent colors*/
+	/* --accent-h:	135;	
+	--accent-s:	38%;
+	--accent-l: 48%; */
+
+    /* 2.1 Dark theme color variables */
+    --bg0-dark: #22282c;
+    --bg1-dark: #272f34;
+
+    --bg-dark: #181818;
+    --shadow: #00000070;
+    --fg-dark: #ffffff;
+
+	--dark-main: var(--color-accent);
+	--dark-main-dim: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 13.8%));
+	--dark-main-trans: rgba(var(--color-accent), 0.3);
+
+    --faded-red: #d48c8d;
+    --faded-orange: #e69875;
+    --faded-yellow: #dbbc7f;
+    --faded-green: #a7c080;
+    --faded-aqua: #83c092;
+    --faded-blue: #7fbbb3;
+    --faded-purple: #d699b6;
+
+    --dim-red: #da6362;
+    --dim-orange: #d77f48;
+    --dim-yellow: #bf983d;
+    --dim-green: #899c40;
+    --dim-aqua: #569d79;
+    --dim-blue: #5a93a2;
+    --dim-purple: #b87b9d;
+
+
+    /* 2.2 Light theme color variables */
+    --bg1-light: #f6f1dd;
+    --bg-light: #ffffff;
+    --bg5-light: #dfdbc8;
+    --grey1-light: #939f91;
+    --fg-light: #1c1e1f;
+
+    --light-main-green: #4ba862;
+    --light-main-green-dim: #64bb90;
+    --light-main-green-trans: #16af6215;
+
+    --light-red: #f85552;
+    --light-orange: #f57d26;
+    --light-yellow: #ecd033;
+    --light-green: #899c40;
+    --light-aqua: #569d79;
+    --light-blue: #5a93a2;
+    --light-purple: #b87b9d;
+
+    --light-dim-red: #f1706f;
+    --light-dim-orange: #f39459;
+    --light-dim-yellow: #fffc3b;
+    --light-dim-green: #a4bb4a;
+    --light-dim-aqua: #6ec398;
+    --light-dim-blue: #6cb3c6;
+    --light-dim-purple: #e092be;
+}
+
+/* 2.3 Dark theme implementation */
+.theme-dark {
+    --background-primary-alt: var(--bg-dark);
+    --background-secondary: var(--bg-dark);
+    --background-secondary-alt: var(--bg-dark);
+    --background-modifier-border: var(--color-accent);
+    --text-normal: var(--fg-dark);
+    --text-faint: #859289;
+    --text-title-h1: var(--dim-red);
+    --text-title-h2: var(--dim-orange);
+    --text-title-h3: var(--dim-yellow);
+    --text-title-h4: var(--dim-green);
+    --text-title-h5: var(--dim-aqua);
+    --text-title-h6: var(--dim-purple);
+    --text-link: var(--dark-main);
+    --text-a: var(--color-accent);
+    --text-a-hover: var(--color-accent-1);
+    --pre-code: var(--bg1-dark);
+    --text-highlight-bg: hsl(var(--accent-h), 80%, 25%);
+    --text-highlight-bold: var(--faded-aqua);
+    --text-highlight-italic: var(--faded-orange);
+    --text-mark: var(--faded-blue);
+    --text-highlight-underline: var(--faded-orange);
+    --text-highlight-crossedout: var(--faded-red);
+    --text-highlight-bg-active: ;
+   /* --interactive-accent: var(--dim-aqua); */
+    --interactive-before: #343b3f;
+    --interactive-after: #415140;
+    --text-accent: var(--color-accent);
+    /* --interactive-accent-rgb: var(--dim-blue); */
+    --inline-code: var(--dim-blue);
+    --code-block: var(--fg-dark);
+    --vim-cursor: var(--faded-blue);
+    --text-selection: hsl(var(--accent-h), 50%, 20%);
+    --scrollbar-bg: var(--color-accent);
+    --scrollbar-active-thumb-bg: var(--color-accent-1);
+    --scrollbar-thumb-bg: var(--color-accent);
+	--tab-radius-active: var(0.1px);
+}
+
+/* 2.4 Light theme implementation */
+.theme-light {
+    --background-primary: var(--bg-light);
+    --background-primary-alt: var(--bg-light);
+    --background-secondary: var(--bg-light);
+    --background-secondary-alt: var(--bg-light);
+    --background-modifier-border: var(--light-main-green);
+
+    --text-normal: #000000;
+    --text-faint: var(--grey1-light);
+    --text-title-h1: #f85552;
+    --text-title-h2: #ee7925;
+    --text-title-h3: #38a331;
+    --text-title-h4: #0f8a6b;
+    --text-title-h5: #4190d1;
+    --text-title-h6: #8540b3;
+
+    --text-link: #2aa065;
+    --text-a: #008643;
+    --text-a-hover: #00b45a;
+    --text-selection: var(--light-main-green-trans);
+    --text-accent: var(--light-main-green);
+
+    --text-highlight-bg: #fffc3b;
+    --text-highlight-bold: var(--light-main-green);
+    --text-highlight-italic: #f6901c;
+    --text-highlight-underline: #6cb3c6;
+    --text-highlight-crossedout: #db5555;
+    --text-mark: #b5d146;
+
+    --pre-code: #f0eeee;
+    --code-block: #000000;
+    --inline-code: var(--light-green) ;
+    
+
+    /* --interactive-accent: var(--light-main-green);
+    --interactive-before: var(--bg5-light);
+    --interactive-accent-rgb: #82dbaf;
+    --interactive-hover: var(--light-main-green); for Calendar Plugin */
+
+
+    --vim-cursor: var(--light-main-green);
+
+    --scrollbar-bg: #404d44;
+    --scrollbar-active-thumb-bg: var(--faded-green);
+    --scrollbar-thumb-bg: var(--dim-green);
+	--tab-radius-active: var(0.1px);
+
+}
+
+
+
+
+/* Editor */
+
+html,
 body {
-	--radius-s: 0px;
-	--radius-m: 0px;
-	--radius-l: 0px;
-	--input-radius: 0px;
-	--tab-radius-active: 0px;
-	--checkbox-radius: 0px;
-	--toggle-radius: 0px;
-	--toggle-thumb-radius: 0px;
-	--slider-thumb-radius: 0px;
+    font-size: 16px;
 }
 
-.workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
-	display: none;
+strong {
+    font-weight: 600 !important;
 }
 
-svg * {
-	stroke-linecap: square;
-	stroke-linejoin: miter;
-	rx: 0;
-	ry: 0;
+.cm-strong {
+    color: var(--text-highlight-bold)
 }
 
-.menu {
-	padding: var(--size-2-1);
+.cm-em {
+    color: var(--text-highlight-italic)
 }
 
-.menu-item {
-	padding: var(--size-4-1) var(--size-4-2);
+.cm-highlight {
+    color: var(--text-mark)
 }
 
-.menu-separator {
-	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+
+.cm-strikethrough {
+    color: var(--text-highlight-crossedout)
 }
+
+.cm-highlight {
+    color: var(--text-mark)
+}
+
+a,
+.cm-hmd-internal-link {
+    color: var(--text-a) !important;
+    text-decoration: none !important;
+}
+
+a:hover,
+.cm-hmd-internal-link:hover,
+.cm-url {
+    color: var(--text-a-hover) !important;
+    text-decoration: none !important;
+}
+
+mark {
+    background-color: var(--text-mark) !important;
+}
+
+
+
+/* - Block */
+
+/* - Blockquote */
+
+/* - Callout */
+
+/* - Code */
+.HyperMD-codeblock-bg {
+    background-color: var(--pre-code) !important;
+}
+
+.HyperMD-codeblock {
+    line-height: 1.4em !important;
+    color: var(--code-block) !important;
+}
+
+.HyperMD-codeblock-begin {
+    border-top-left-radius: 4px !important;
+    border-top-right-radius: 4px !important;
+}
+
+.HyperMD-codeblock-end {
+    border-bottom-left-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+}
+
+/* - Embed */
+
+/* - Footnote */
+
+/* - Headings */
+body.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
+    box-shadow: 0px 0px 10px 0px rgb(86 157 121 / 20%) !important;
+}
+
+
+.workspace-ribbon.mod-right.is-collapsed {
+    border-left-color: var(--background-secondary-alt);
+}
+
+
+.workspace-ribbon.mod-left.is-collapsed {
+    border-right-color: var(--background-secondary-alt);
+}
+
+.workspace-ribbon-collapse-btn {
+    stroke-width: 8px;
+}
+
+.workspace-ribbon-collapse-btn:hover {
+    color: var(--light-main-green-dim);
+}
+
+.markdown-embed-title {
+    font-weight: 600 !important;
+}
+
+.markdown-embed {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+
+.cm-header-1,
+.markdown-preview-section h1 {
+    font-weight: 500 !important;
+    font-size: 34px !important;
+    color: var(--text-title-h1) !important;
+}
+
+.cm-header-2,
+.markdown-preview-section h2 {
+    font-weight: 500 !important;
+    font-size: 26px !important;
+    color: var(--text-title-h2) !important;
+}
+
+.cm-header-3,
+.markdown-preview-section h3 {
+    font-weight: 500 !important;
+    font-size: 22px !important;
+    color: var(--text-title-h3) !important;
+}
+
+.cm-header-4,
+.markdown-preview-section h4 {
+    font-weight: 500 !important;
+    font-size: 20px !important;
+    color: var(--text-title-h4) !important;
+}
+
+.cm-header-5,
+.markdown-preview-section h5 {
+    font-weight: 500 !important;
+    font-size: 18px !important;
+    color: var(--text-title-h5) !important;
+}
+
+.cm-header-6,
+.markdown-preview-section h6 {
+    font-weight: 500 !important;
+    font-size: 18px !important;
+    color: var(--text-title-h6) !important;
+}
+
+
+/* - Horizontal rule */
+
+/* - Link */
+
+/* - List */
+
+/* - Properties */
+
+/* - Table */
+
+
+td{
+    border: 0 !important;
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    padding: 4px, 6px;
+}
+
+th{
+    font-weight: 600 !important;
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 2px solid var(--background-modifier-border) !important; 
+}
+
+tr:nth-child(2n) {
+    background-color: #85ffc210;
+}
+
+tr:hover {
+    background-color: var(--text-selection);
+}
+
+.table-view-table > tbody > tr{
+    background-color: var(--background-primary-alt) !important;
+}
+
+.table-view-table > tbody > tr:hover{
+    background-color: var(--text-selection) !important;
+}
+
+
+.HyperMD-table-row {
+    line-height: normal !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    /* background-color: var(--pre-code) !important; */
+}
+
+.HyperMD-table-row-0 {
+    padding-top: 0px !important;
+}
+
+
+
+
+/* Window */
+.workspace-split.mod-root .view-content{
+    background-color: var(--background-secondary);
+}
+
+.view-header{
+    background-color: var(--background-secondary);
+}
+
+
+
+/* Divider */
+
+.workspace-leaf-resize-handle{
+	border-width: 0.1px;
+	border-color: var(--background-modifier-border);
+
+}
+
+
+.workspace-ribbon{
+	border-radius: 0px;
+	border-width: 0.1px;
+	border-color: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+}
+
+
+.workspace-ribbon.mod-left:before{
+	border-radius: 0.1px;
+	border-color: var(--background-modifier-border);
+}
+
+
+
+.workspace-tab-header{
+border-radius: 0;
+
+
+}
+
+
+
+
+.workspace-tab-header-container{
+    border-bottom-width: 0.1px;
+    border-color: var(--background-modifier-border);
+   
+   }
+   
+   /* .workspace-tab-header.is-active{
+background-color: var(--color-accent);       
+   } */
+   
+
+/*File nav*/
+
+.is-active .nav-file-title {
+    color: var(--text-a) !important;
+    background-color: var(--background-primary);
+}
+
+.nav-file-title {
+    padding: 2px 4px 2px 8px;
+    border-radius: 0px;
+}
+
+
+.nav-file-title.is-active {
+    padding-left: 3px; 
+    border-left: 5px solid var(--interactive-accent);
+    background-color: var(--interactive-before);
+}
+
+.nav-file-title.is-active:hover {
+    border-left: 5px solid var(--interactive-accent);
+    background-color: var(--interactive-after);
+}
+
+
