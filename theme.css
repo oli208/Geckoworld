@@ -539,3 +539,13 @@ background-color: var(--color-accent);
 }
 
 
+
+/*Icons*/
+/*Properties */
+.metadata-property-icon{
+    color: var(--color-accent);
+}
+
+.metadata-property-icon:hover{
+    color: var(--color-accent-1);
+}
