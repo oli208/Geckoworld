@@ -159,6 +159,7 @@ Window
     --background-modifier-border: var(--color-accent);
     --text-normal: var(--fg-dark);
     --text-faint: #859289;
+    --inline-title-color: var(--color-accent);
     --text-title-h1: var(--dim-red);
     --text-title-h2: var(--dim-orange);
     --text-title-h3: var(--dim-yellow);
@@ -170,10 +171,10 @@ Window
     --text-a-hover: var(--color-accent-1);
     --pre-code: var(--bg1-dark);
     --text-highlight-bg: hsl(var(--accent-h), 80%, 25%);
-    --text-highlight-bold: var(--faded-aqua);
+    --text-highlight-bold: hsl(var(--accent-h), 100%, 70%);
     --text-highlight-italic: var(--faded-orange);
     --text-mark: var(--faded-blue);
-    --text-highlight-underline: var(--faded-orange);
+    /* --text-highlight-underline: hsl(var(--accent-h), 100%, 70%); */
     --text-highlight-crossedout: var(--faded-red);
     --text-highlight-bg-active: ;
    /* --interactive-accent: var(--dim-aqua); */
@@ -188,7 +189,8 @@ Window
     --scrollbar-bg: var(--color-accent);
     --scrollbar-active-thumb-bg: var(--color-accent-1);
     --scrollbar-thumb-bg: var(--color-accent);
-	--tab-radius-active: var(0.1px);
+	--tab-radius-active: 0px;
+    /* --tab-stacked-header-width: 20px; */
 }
 
 /* 2.4 Light theme implementation */
@@ -256,24 +258,20 @@ strong {
 }
 
 .cm-strong {
-    color: var(--text-highlight-bold)
+    color: var(--text-highlight-bold) !important;
 }
 
 .cm-em {
-    color: var(--text-highlight-italic)
+    color: var(--text-highlight-italic) !important;
 }
 
 .cm-highlight {
-    color: var(--text-mark)
+    color: var(--text-mark) !important;
 }
 
 
 .cm-strikethrough {
-    color: var(--text-highlight-crossedout)
-}
-
-.cm-highlight {
-    color: var(--text-mark)
+    color: var(--text-highlight-crossedout) !important;
 }
 
 a,
@@ -300,6 +298,10 @@ mark {
 /* - Blockquote */
 
 /* - Callout */
+.callout{
+    border-width: 1px;
+}
+
 
 /* - Code */
 .HyperMD-codeblock-bg {
@@ -496,23 +498,21 @@ tr:hover {
 
 .workspace-tab-header{
 border-radius: 0;
-
-
+background-color: #008643;
 }
 
-
+.workspace-tab-header.is-active{
+    background-color: hsl(var(--accent-h), 50%, 10%);       
+} 
+       
 
 
 .workspace-tab-header-container{
     border-bottom-width: 0.1px;
     border-color: var(--background-modifier-border);
-   
    }
    
-   /* .workspace-tab-header.is-active{
-background-color: var(--color-accent);       
-   } */
-   
+
 
 /*File nav*/
 
