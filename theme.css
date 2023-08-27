@@ -94,6 +94,9 @@ Window
 	--accent-s:	38%;
 	--accent-l: 48%; */
 
+    --checkbox-progress-width: 50px;
+
+
     /* 2.1 Dark theme color variables */
     --bg0-dark: #22282c;
     --bg1-dark: #272f34;
@@ -409,6 +412,102 @@ body.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
 /* - Link */
 
 /* - List */
+
+/* [0-4] Progress */
+  
+  input[data-task="0"]:checked,
+  li[data-task="0"] > input:checked,
+  li[data-task="0"] > p > input:checked,
+  input[data-task="1"]:checked,
+  li[data-task="1"] > input:checked,
+  li[data-task="1"] > p > input:checked,
+  input[data-task="2"]:checked,
+  li[data-task="2"] > input:checked,
+  li[data-task="2"] > p > input:checked,
+  input[data-task="3"]:checked,
+  li[data-task="3"] > input:checked,
+  li[data-task="3"] > p > input:checked,
+  input[data-task="4"]:checked,
+  li[data-task="4"] > input:checked,
+  li[data-task="4"] > p > input:checked,
+  input[data-task="5"]:checked,
+  li[data-task="5"] > input:checked,
+  li[data-task="5"] > p > input:checked {
+    background: transparent;
+    background-image: none;
+    width: 50px;
+    height: 14px;
+    border: 1px solid var(--interactive-accent);
+    border-radius: var(--tab-radius);
+    position: relative;
+    overflow: hidden;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+  
+  input[data-task="0"]:checked:after,
+  li[data-task="0"] > input:checked:after,
+  li[data-task="0"] > p > input:checked:after {
+    display: none;
+  }
+  
+  input[data-task="1"]:checked:after,
+  li[data-task="1"] > input:checked:after,
+  li[data-task="1"] > p > input:checked:after {
+    content: " ";
+    display: block;
+    background: var(--interactive-accent);
+    width: calc(var(--checkbox-progress-width) * 2.5 / 10);
+    height: 100%;
+    margin-top: 1px;
+    border-radius: var(--tab-radius);
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+  
+  input[data-task="2"]:checked:after,
+  li[data-task="2"] > input:checked:after,
+  li[data-task="2"] > p > input:checked:after {
+    content: " ";
+    display: block;
+    background: var(--interactive-accent);
+    width: calc(var(--checkbox-progress-width) * 5 / 10);
+    height: 100%;
+    margin-top: 1px;
+    border-radius: var(--tab-radius);
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+  
+  input[data-task="3"]:checked:after,
+  li[data-task="3"] > input:checked:after,
+  li[data-task="3"] > p > input:checked:after {
+    content: " ";
+    display: block;
+    background: var(--interactive-accent);
+    width: calc(var(--checkbox-progress-width) * 7.5 / 10);
+    height: 100%;
+    margin-top: 1px;
+    border-radius: var(--tab-radius);
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+  
+  input[data-task="4"]:checked:after,
+  li[data-task="4"] > input:checked:after,
+  li[data-task="4"] > p > input:checked:after {
+    content: " ";
+    display: block;
+    background: var(--interactive-accent);
+    width: calc(var(--checkbox-progress-width) * 10 / 10);
+    height: 100%;
+    margin-top: 1px;
+    border-radius: var(--tab-radius);
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  
 
 /* - Properties */
 
