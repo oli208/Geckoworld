@@ -596,22 +596,38 @@ tr:hover {
 
 
 .workspace-tab-header{
-border-radius: 0;
-background-color: #008643;
+    border-radius: 0;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .workspace-tab-header.is-active{
-    background-color: hsl(var(--accent-h), 50%, 10%);       
+    background-color: var(--background-secondary);
 } 
-       
-
+     
+.workspace .mod-root .workspace-tabs.mod-stacked 
+.workspace-tab-container .workspace-tab-header {
+    background-color: var(--background-secondary);
+    width: 25px;
+}
 
 .workspace-tab-header-container{
     border-bottom-width: 0.1px;
     border-color: var(--background-modifier-border);
-   }
+}
    
+.workspace-split.mod-root .workspace-tab-header.is-active::before,
+.workspace-split.mod-root .workspace-tab-header.is-active::after{
+    box-shadow: none;
+}
 
+.workspace-tab-header-inner{
+    border-radius: 0px;
+}
+
+.workspace .mod-root .workspace-tab-header{
+    padding: 0px;
+}
 
 /*File nav*/
 
