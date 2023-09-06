@@ -413,99 +413,61 @@ body.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
 
 /* - List */
 
-/* [0-4] Progress */
+/* [0-5] Progress */
   
-  input[data-task="0"]:checked,
-  li[data-task="0"] > input:checked,
-  li[data-task="0"] > p > input:checked,
-  input[data-task="1"]:checked,
-  li[data-task="1"] > input:checked,
-  li[data-task="1"] > p > input:checked,
-  input[data-task="2"]:checked,
-  li[data-task="2"] > input:checked,
-  li[data-task="2"] > p > input:checked,
-  input[data-task="3"]:checked,
-  li[data-task="3"] > input:checked,
-  li[data-task="3"] > p > input:checked,
-  input[data-task="4"]:checked,
-  li[data-task="4"] > input:checked,
-  li[data-task="4"] > p > input:checked,
-  input[data-task="5"]:checked,
-  li[data-task="5"] > input:checked,
-  li[data-task="5"] > p > input:checked {
-    background: transparent;
-    background-image: none;
-    width: 50px;
-    height: 14px;
+input.task-list-item-checkbox:is(.task-list-item-checkbox[data-task="0"],
+    .task-list-item-checkbox[data-task="1"],
+    .task-list-item-checkbox[data-task="2"],
+    .task-list-item-checkbox[data-task="3"],
+    .task-list-item-checkbox[data-task="4"],
+    .task-list-item-checkbox[data-task="5"]
+) {
+    width: 55px;
+    border-radius: 5px;
+    background: var(--bg2);
     border: 1px solid var(--interactive-accent);
-    border-radius: var(--tab-radius);
-    position: relative;
-    overflow: hidden;
-    mask-image: none;
-    -webkit-mask-image: none;
-  }
-  
-  input[data-task="0"]:checked:after,
-  li[data-task="0"] > input:checked:after,
-  li[data-task="0"] > p > input:checked:after {
-    display: none;
-  }
-  
-  input[data-task="1"]:checked:after,
-  li[data-task="1"] > input:checked:after,
-  li[data-task="1"] > p > input:checked:after {
-    content: " ";
-    display: block;
-    background: var(--interactive-accent);
-    width: calc(var(--checkbox-progress-width) * 2.5 / 10);
-    height: 100%;
-    margin-top: 1px;
-    border-radius: var(--tab-radius);
-    mask-image: none;
-    -webkit-mask-image: none;
-  }
-  
-  input[data-task="2"]:checked:after,
-  li[data-task="2"] > input:checked:after,
-  li[data-task="2"] > p > input:checked:after {
-    content: " ";
-    display: block;
-    background: var(--interactive-accent);
-    width: calc(var(--checkbox-progress-width) * 5 / 10);
-    height: 100%;
-    margin-top: 1px;
-    border-radius: var(--tab-radius);
-    mask-image: none;
-    -webkit-mask-image: none;
-  }
-  
-  input[data-task="3"]:checked:after,
-  li[data-task="3"] > input:checked:after,
-  li[data-task="3"] > p > input:checked:after {
-    content: " ";
-    display: block;
-    background: var(--interactive-accent);
-    width: calc(var(--checkbox-progress-width) * 7.5 / 10);
-    height: 100%;
-    margin-top: 1px;
-    border-radius: var(--tab-radius);
-    mask-image: none;
-    -webkit-mask-image: none;
-  }
-  
-  input[data-task="4"]:checked:after,
-  li[data-task="4"] > input:checked:after,
-  li[data-task="4"] > p > input:checked:after {
-    content: " ";
-    display: block;
-    background: var(--interactive-accent);
-    width: calc(var(--checkbox-progress-width) * 10 / 10);
-    height: 100%;
-    margin-top: 1px;
-    border-radius: var(--tab-radius);
-    mask-image: none;
-    -webkit-mask-image: none;
-  }
+    height: 12px;
+
+    &::after {
+        content: '' !important;
+        width: calc(55px * var(--progress-frac));
+        background: var(--interactive-accent) !important;
+        margin-top: 1px;
+        height: 100%;
+        display: block;
+        border-radius: 5px;
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+}
+
+input.task-list-item-checkbox[data-task="0"] {
+    border: 1px solid var(--checkbox-border-color) !important;
+}
+
+input.task-list-item-checkbox[data-task="0"] {
+    --progress-frac: 0;
+}
+
+input.task-list-item-checkbox[data-task="1"] {
+    --progress-frac: 0.2;
+}
+
+input.task-list-item-checkbox[data-task="2"] {
+    --progress-frac: 0.4;
+}
+
+input.task-list-item-checkbox[data-task="3"] {
+    --progress-frac: 0.6;
+}
+
+input.task-list-item-checkbox[data-task="4"] {
+    --progress-frac: 0.8;
+}
+
+input.task-list-item-checkbox[data-task="5"] {
+    --progress-frac: 1;
+}
 
   
 
