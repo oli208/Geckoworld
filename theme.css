@@ -94,13 +94,6 @@ Window
 	--accent-s:	38%;
 	--accent-l: 48%; */
 
-    --checkbox-progress-width: 50px;
-    --checkbox-progress-radius: 5px;
-    --checkbox-progress-border-width: 1px;
-    --checkbox-progress-height: 12px;
-    --checkbox-progress-background: initial;
-    --checkbox-progress-unit-frac: 0.2;
-    --checkbox-progress-animation-time: 600ms;
 
 
     /* 2.1 Dark theme color variables */
@@ -200,6 +193,16 @@ Window
     --scrollbar-thumb-bg: var(--color-accent);
 	--tab-radius-active: 0px;
     /* --tab-stacked-header-width: 20px; */
+
+    --checkbox-radius: 10px;
+    --checkbox-border-color: var(--color-accent);
+    --checkbox-progress-width: 50px;
+    --checkbox-progress-border-width: 1px;
+    --checkbox-progress-height: 12px;
+    --checkbox-progress-background: initial;
+    --checkbox-progress-unit-frac: 0.2;
+    --checkbox-progress-animation-time: 600ms;
+
 }
 
 /* 2.4 Light theme implementation */
@@ -436,7 +439,7 @@ input.task-list-item-checkbox:is(
     [data-task="5"]
 ) {
     width: var(--checkbox-progress-width);
-    border-radius: var(--checkbox-progress-radius);
+    border-radius: var(--checkbox-radius);
     background: var(--checkbox-progress-background);
     border: var(--checkbox-progress-border-width) solid var(--interactive-accent);
     height: var(--checkbox-progress-height);
@@ -453,7 +456,7 @@ input.task-list-item-checkbox:is(
         background: var(--interactive-accent) !important;
         margin-top: 1px;
         height: 100%;
-        border-radius: var(--checkbox-progress-radius);
+        border-radius: var(--checkbox-radius);
         -webkit-mask-image: none;
         mask-image: none; /* vsc is not happy since -webkit-mask-image is not cross-platform even though this does nothing */
     }
