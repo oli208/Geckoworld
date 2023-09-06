@@ -95,6 +95,12 @@ Window
 	--accent-l: 48%; */
 
     --checkbox-progress-width: 50px;
+    --checkbox-progress-radius: 5px;
+    --checkbox-progress-border-width: 1px;
+    --checkbox-progress-height: 12px;
+    --checkbox-progress-background: initial;
+    --checkbox-progress-unit-frac: 0.2;
+    --checkbox-progress-animation-time: 600ms;
 
 
     /* 2.1 Dark theme color variables */
@@ -415,34 +421,46 @@ body.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
 
 /* [0-5] Progress */
   
-input.task-list-item-checkbox:is(.task-list-item-checkbox[data-task="0"],
-    .task-list-item-checkbox[data-task="1"],
-    .task-list-item-checkbox[data-task="2"],
-    .task-list-item-checkbox[data-task="3"],
-    .task-list-item-checkbox[data-task="4"],
-    .task-list-item-checkbox[data-task="5"]
+
+@keyframes checkbox-progress-transition {
+    from { width: calc(var(--checkbox-progress-width) * (var(--progress-frac) - var(--checkbox-progress-unit-frac))) }
+    to { width: calc(var(--checkbox-progress-width) * var(--progress-frac)) }
+}
+
+input.task-list-item-checkbox:is(
+    [data-task="0"],
+    [data-task="1"],
+    [data-task="2"],
+    [data-task="3"],
+    [data-task="4"],
+    [data-task="5"]
 ) {
-    width: 55px;
-    border-radius: 5px;
-    background: var(--bg2);
-    border: 1px solid var(--interactive-accent);
-    height: 12px;
+    width: var(--checkbox-progress-width);
+    border-radius: var(--checkbox-progress-radius);
+    background: var(--checkbox-progress-background);
+    border: var(--checkbox-progress-border-width) solid var(--interactive-accent);
+    height: var(--checkbox-progress-height);
+    transition: border var(--checkbox-progress-animation-time);
+    
+    &:hover {
+        background: var(--checkbox-progress-background);
+    }
 
     &::after {
-        content: '' !important;
-        width: calc(55px * var(--progress-frac));
+        width: calc(var(--checkbox-progress-width) * var(--progress-frac));
+        animation-name: checkbox-progress-transition;
+        animation-duration: var(--checkbox-progress-animation-time);
         background: var(--interactive-accent) !important;
         margin-top: 1px;
         height: 100%;
-        display: block;
-        border-radius: 5px;
+        border-radius: var(--checkbox-progress-radius);
         -webkit-mask-image: none;
-        mask-image: none;
+        mask-image: none; /* vsc is not happy since -webkit-mask-image is not cross-platform even though this does nothing */
     }
 }
 
 input.task-list-item-checkbox[data-task="0"] {
-    border: 1px solid var(--checkbox-border-color) !important;
+    border: var(--checkbox-progress-border-width) solid var(--checkbox-border-color) !important;
 }
 
 input.task-list-item-checkbox[data-task="0"] {
