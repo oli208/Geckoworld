@@ -105,9 +105,12 @@ Window
     --fg-dark: #ffffff;
 
 	--dark-main: var(--color-accent);
-	--dark-main-dim: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 13.8%));
+	--dark-main-dim: hsl(var(--accent-h), var(--accent-s), var(--accent-l)); 
+    --dark-main-light: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 30.8%));
+
 	--dark-main-trans: rgba(var(--color-accent), 0.3);
 
+    --color-accent-3: hsl(calc(var(--accent-h) - 3), calc(var(--accent-s) * 1.02), calc(var(--accent-l) * 1.15));
     --faded-red: #d48c8d;
     --faded-orange: #e69875;
     --faded-yellow: #dbbc7f;
@@ -168,17 +171,22 @@ Window
     --text-title-h4: var(--dim-green);
     --text-title-h5: var(--dim-aqua);
     --text-title-h6: var(--dim-purple);
-    --text-link: var(--dark-main);
-    --text-a: var(--color-accent);
-    --text-a-hover: var(--color-accent-1);
+
     --pre-code: var(--bg1-dark);
-    --text-highlight-bg: hsl(var(--accent-h), 80%, 25%);
+    --text-highlight-bg: hsl(var(--accent-h), 50%, 40%);
     --text-highlight-bold: hsl(var(--accent-h), 100%, 70%);
-    --text-highlight-italic: var(--faded-orange);
-    --text-mark: var(--faded-blue);
+    --text-highlight-italic: var(--color-accent-1)  ;
+    /* --text-mark: var(--faded-blue); */
     /* --text-highlight-underline: hsl(var(--accent-h), 100%, 70%); */
     --text-highlight-crossedout: var(--faded-red);
-    --text-highlight-bg-active: ;
+    --text-selection: hsl(var(--accent-h), 50%, 30%);
+    
+
+    --link-color: var(--color-accent-1);
+    --link-color-hover: var(--color-accent-2);  
+    --link-unresolved-opacity: 0.8;
+
+
    /* --interactive-accent: var(--dim-aqua); */
     --interactive-before: #343b3f;
     --interactive-after: #415140;
@@ -187,12 +195,13 @@ Window
     --inline-code: var(--dim-blue);
     --code-block: var(--fg-dark);
     --vim-cursor: var(--faded-blue);
-    --text-selection: hsl(var(--accent-h), 50%, 20%);
     --scrollbar-bg: var(--color-accent);
     --scrollbar-active-thumb-bg: var(--color-accent-1);
-    --scrollbar-thumb-bg: var(--color-accent);
+    --scrollbar-thumb-bg: var(--color-accent);    
 	--tab-radius-active: 0px;
     /* --tab-stacked-header-width: 20px; */
+
+    --status-bar-radius:0px;
 
     --checkbox-radius: 10px;
     --checkbox-border-color: var(--color-accent);
@@ -288,14 +297,12 @@ strong {
 
 a,
 .cm-hmd-internal-link {
-    color: var(--text-a) !important;
     text-decoration: none !important;
 }
 
 a:hover,
 .cm-hmd-internal-link:hover,
 .cm-url {
-    color: var(--text-a-hover) !important;
     text-decoration: none !important;
 }
 
@@ -441,11 +448,11 @@ input.task-list-item-checkbox:is(
     width: var(--checkbox-progress-width);
     border-radius: var(--checkbox-radius);
     background: var(--checkbox-progress-background);
-    border: var(--checkbox-progress-border-width) solid var(--interactive-accent);
+    border: var(--checkbox-progress-border-width) solid var(--color-accent);
     height: var(--checkbox-progress-height);
-    transition: border var(--checkbox-progress-animation-time);
+    transition: border var(--checkbox-progress-animation-time); 
     
-    &:hover {
+     &:hover {
         background: var(--checkbox-progress-background);
     }
 
@@ -453,7 +460,7 @@ input.task-list-item-checkbox:is(
         width: calc(var(--checkbox-progress-width) * var(--progress-frac));
         animation-name: checkbox-progress-transition;
         animation-duration: var(--checkbox-progress-animation-time);
-        background: var(--interactive-accent) !important;
+        background: var(--color-accent) !important;
         margin-top: 1px;
         height: 100%;
         border-radius: var(--checkbox-radius);
@@ -490,7 +497,74 @@ input.task-list-item-checkbox[data-task="5"] {
     --progress-frac: 1;
 }
 
-  
+
+/*reading view*/
+
+
+.task-list-item:is(
+    [data-task="0"],
+    [data-task="1"],
+    [data-task="2"],
+    [data-task="3"],
+    [data-task="4"],
+    [data-task="5"]
+) {
+    .task-list-item-checkbox{
+    width: var(--checkbox-progress-width);
+    border-radius: var(--checkbox-radius);
+    background: var(--checkbox-progress-background);
+    border: var(--checkbox-progress-border-width) solid var(--interactive-accent);
+    height: var(--checkbox-progress-height);
+    transition: border var(--checkbox-progress-animation-time); 
+    
+     &:hover {
+        background: var(--checkbox-progress-background);
+    }
+
+    &::after {
+        width: calc(var(--checkbox-progress-width) * var(--progress-frac));
+        animation-name: checkbox-progress-transition;
+        animation-duration: var(--checkbox-progress-animation-time);
+        background: var(--interactive-accent) !important;
+        margin-top: 1px;
+        height: 100%;
+        border-radius: var(--checkbox-radius);
+        -webkit-mask-image: none;
+        mask-image: none; /* vsc is not happy since -webkit-mask-image is not cross-platform even though this does nothing */
+    }
+}
+}
+
+
+
+
+.task-list-item-checkbox[data-task="0"] {
+    border: var(--checkbox-progress-border-width) solid var(--checkbox-border-color) !important;
+}
+
+.task-list-item[data-task="0"] {
+    --progress-frac: 0;
+}
+.task-list-item[data-task="1"] {
+    --progress-frac: 0.2;
+}
+
+.task-list-item[data-task="2"] {
+    --progress-frac: 0.4;
+}
+
+.task-list-item[data-task="3"] {
+    --progress-frac: 0.6;
+}
+
+.task-list-item[data-task="4"] {
+    --progress-frac: 0.8;
+}
+
+.task-list-item[data-task="5"] {
+    --progress-frac: 1;
+}
+
 
 /* - Properties */
 
