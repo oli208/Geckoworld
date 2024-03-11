@@ -277,14 +277,16 @@ body {
     font-size: 16px;
 }
 
-strong {
-    font-weight: 600 !important;
-}
-
+strong,
 .cm-strong {
+    font-weight: 600 !important;
     color: var(--text-highlight-bold) !important;
 }
 
+/* .cm-strong {
+    color: var(--text-highlight-bold) !important;
+} */
+em,
 .cm-em {
     color: var(--text-highlight-italic) !important;
 }
@@ -293,7 +295,7 @@ strong {
     color: var(--text-mark) !important;
 }
 
-
+del,
 .cm-strikethrough {
     color: var(--text-highlight-crossedout) !important;
 }
@@ -310,7 +312,7 @@ a:hover,
 }
 
 mark {
-    background-color: var(--text-mark) !important;
+    background-color: var(--text-highlight-bg) !important;
 }
 
 
