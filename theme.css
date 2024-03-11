@@ -212,6 +212,9 @@ Window
     --checkbox-progress-unit-frac: 0.2;
     --checkbox-progress-animation-time: 600ms;
 
+    --table-border-width: 0px;
+    --table-header-border-width: 0 px;
+
 }
 
 /* 2.4 Light theme implementation */
@@ -571,28 +574,42 @@ input.task-list-item-checkbox[data-task="5"] {
 /* - Table */
 
 
+
+
 td{
-    border: 0 !important;
+    border: 0 !important; 
     border-top: 0 !important;
     border-left: 0 !important;
     border-right: 0 !important;
-    padding: 4px, 6px;
-}
+    /* padding: 4px, 6px; */
+} 
 
-th{
+ th{
     font-weight: 600 !important;
     border-top: 0 !important;
     border-left: 0 !important;
     border-right: 0 !important;
     border-bottom: 2px solid var(--background-modifier-border) !important; 
+} 
+
+tr {
+    border-bottom: 1px solid  var(--text-selection) !important;
+
 }
+
+
+
 
 tr:nth-child(2n) {
-    background-color: #85ffc210;
+    /* background-color: #85ffc210; */
+    /* background-color: #f70909; */
+
 }
 
-tr:hover {
-    background-color: var(--text-selection);
+tbody > tr:hover {
+    /* background-color: var(--text-selection); */
+    background-color: var(--text-selection) !important;
+
 }
 
 .table-view-table > tbody > tr{
