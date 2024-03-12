@@ -162,24 +162,28 @@ Window
     --background-secondary: var(--bg-dark);
     --background-secondary-alt: var(--bg-dark);
     --background-modifier-border: var(--color-accent);
+
+    --ribbon-background: var(--bg-dark);
+    --ribbon-background-collapsed: var(--bg-dark);
+
     --text-normal: var(--fg-dark);
     --text-faint: #859289;
     --inline-title-color: var(--color-accent);
-    --text-title-h1: var(--dim-red);
-    --text-title-h2: var(--dim-orange);
-    --text-title-h3: var(--dim-yellow);
-    --text-title-h4: var(--dim-green);
-    --text-title-h5: var(--dim-aqua);
-    --text-title-h6: var(--dim-purple);
+    --text-title-h1: hsl(calc(var(--accent-h) + 40), var(--accent-s), var(--accent-l)) /*var(--dim-red)*/;
+    --text-title-h2: hsl(calc(var(--accent-h) + 80), var(--accent-s), var(--accent-l));
+    --text-title-h3: hsl(calc(var(--accent-h) + 120), var(--accent-s), var(--accent-l));
+    --text-title-h4: hsl(calc(var(--accent-h) + 160), var(--accent-s), var(--accent-l));
+    --text-title-h5: hsl(calc(var(--accent-h) + 200), var(--accent-s), var(--accent-l));
+    --text-title-h6: hsl(calc(var(--accent-h) + 240), var(--accent-s), var(--accent-l));
 
     --pre-code: var(--bg1-dark);
-    --text-highlight-bg: hsl(var(--accent-h), 50%, 40%);
-    --text-highlight-bold: hsl(var(--accent-h), 100%, 70%);
+    --text-highlight-bg: hsla(var(--accent-h), 50%, 20%, 70%);
+    --text-highlight-bold: var(--color-accent-1);
     --text-highlight-italic: var(--color-accent-1)  ;
     /* --text-mark: var(--faded-blue); */
     /* --text-highlight-underline: hsl(var(--accent-h), 100%, 70%); */
     --text-highlight-crossedout: var(--faded-red);
-    --text-selection: hsl(var(--accent-h), 50%, 30%);
+    --text-selection: hsla(var(--accent-h), 50%, 30%, 50%);
     
 
     --link-color: var(--color-accent-1);
@@ -387,29 +391,29 @@ body.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
 
 .cm-header-1,
 .markdown-preview-section h1 {
-    font-weight: 500 !important;
-    font-size: 34px !important;
+    font-weight: 800 !important;
+    font-size: 30px !important;
     color: var(--text-title-h1) !important;
 }
 
 .cm-header-2,
 .markdown-preview-section h2 {
-    font-weight: 500 !important;
-    font-size: 26px !important;
+    font-weight: 700 !important;
+    font-size: 22px !important;
     color: var(--text-title-h2) !important;
 }
 
 .cm-header-3,
 .markdown-preview-section h3 {
-    font-weight: 500 !important;
-    font-size: 22px !important;
+    font-weight: 600 !important;
+    font-size: 20px !important;
     color: var(--text-title-h3) !important;
 }
 
 .cm-header-4,
 .markdown-preview-section h4 {
     font-weight: 500 !important;
-    font-size: 20px !important;
+    font-size: 18px !important;
     color: var(--text-title-h4) !important;
 }
 
@@ -586,16 +590,16 @@ td{
     /* padding: 4px, 6px; */
 } 
 
- th{
+th{
     font-weight: 600 !important;
     border-top: 0 !important;
     border-left: 0 !important;
     border-right: 0 !important;
-    border-bottom: 2px solid var(--background-modifier-border) !important; 
+    border-bottom: 2px solid var(--table-header-border-color) !important; 
 } 
 
 tr {
-    border-bottom: 1px solid  var(--text-selection) !important;
+    border-bottom: 0.5px solid  hsla(var(--accent-h), var(--accent-s), var(--accent-l), 50%) !important;
 
 }
 
@@ -610,7 +614,7 @@ tr:nth-child(2n) {
 
 tbody > tr:hover {
     /* background-color: var(--text-selection); */
-    background-color: var(--text-selection) !important;
+    background-color: hsla(var(--accent-h), 50%, 20%, 10%) !important;
 
 }
 
@@ -619,7 +623,7 @@ tbody > tr:hover {
 }
 
 .table-view-table > tbody > tr:hover{
-    background-color: var(--text-selection) !important;
+    background-color: hsla(var(--accent-h), 50%, 20%, 10%) !important;
 }
 
 
@@ -646,6 +650,11 @@ tbody > tr:hover {
     background-color: var(--background-secondary);
 }
 
+/* Scrollbar */
+/* change width */
+::-webkit-scrollbar {
+    width: 8px !important;
+}
 
 
 /* Divider */
