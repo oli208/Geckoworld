@@ -1,11 +1,12 @@
 # Geckoworld
 Geckoworld is custom theme for [Obsidian](https://obsidian.md/) with a focus on minimal use of color and less distraction elements.
 
-![](/img/themeDemo.png)
+![](/images/themeDemo.png)
 
 ## Screenshots
 flexible callout grids
-![](/img/calloutgrid3-1.png)
+
+![](/images/calloutgrid3-1.png)
 
 ```
 > [!multi-callout]
@@ -23,7 +24,8 @@ flexible callout grids
 ```
 
 progress checkboxes
-![](/img/progresscheckboxes.png)
+
+![](./images/progresscheckboxes.png)
 
 ```
 - [0] progress level 0
