@@ -329,11 +329,11 @@ mark {
 
 /* - Callout */
 .callout{
-    border-left-width: 6px;
+    border-top-width: 8px;
 
     overflow: visible; 
     --callout-border-width: 1px;
-    --callout-border-opacity: 0.5;
+    --callout-border-opacity: 0.7;
     --callout-blend-mode: normal;
     background-color: rgba(0,0,0,0);
 
@@ -342,12 +342,16 @@ mark {
 
 .callout .callout-title {
     background-color: var(--background-secondary);
-    margin-top: -24px;
+    margin-top: -28px;
     z-index: 100;
     width: fit-content;
-    padding: 0 0.4em;
-    margin-left: -0.75em;
+    padding: 0 0.2em;
+    margin-left: -0.6em;
     font-variant-caps: all-small-caps;
+}
+
+.callout-fold {
+    padding-right: unset;
 }
 
 
