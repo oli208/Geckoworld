@@ -205,6 +205,8 @@ Window
 	--tab-radius-active: 0px;
     /* --tab-stacked-header-width: 20px; */
 
+    --callout-radius: 0px;
+
     --status-bar-radius:0px;
 
     --checkbox-radius: 10px;
@@ -327,9 +329,31 @@ mark {
 
 /* - Callout */
 .callout{
-    border-width: 1px;
+    border-left-width: 6px;
+
+    overflow: visible; 
+    --callout-border-width: 1px;
+    --callout-border-opacity: 0.5;
+    --callout-blend-mode: normal;
+    background-color: rgba(0,0,0,0);
+
 }
 
+
+.callout .callout-title {
+    background-color: var(--background-secondary);
+    margin-top: -24px;
+    z-index: 100;
+    width: fit-content;
+    padding: 0 0.4em;
+    margin-left: -0.75em;
+    font-variant-caps: all-small-caps;
+}
+
+
+.cm-embed-block.cm-callout {
+    padding-top: 12px;
+}
 
 /* - Code */
 .HyperMD-codeblock-bg {
