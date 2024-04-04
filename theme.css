@@ -703,7 +703,7 @@ tbody > tr:hover {
 
 .workspace-ribbon.mod-left:before{
 	border-radius: 0.1px;
-	border-color: var(--background-modifier-border);
+	border-bottom: solid var(--color-accent) 0.5px
 }
 
 
