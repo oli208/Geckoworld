@@ -350,6 +350,12 @@ mark {
     font-variant-caps: all-small-caps;
 }
 
+
+.callout-title-inner ol{
+    margin: 0px;
+    padding: 0 0.2em 0 0.8em;
+}
+
 .callout-fold {
     padding-right: unset;
 }
