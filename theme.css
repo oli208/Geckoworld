@@ -365,6 +365,11 @@ mark {
     padding-top: 12px;
 }
 
+.callout-title-inner > ol > li::marker{
+    color: var(--callout-color)
+}
+
+
 /* - Code */
 .HyperMD-codeblock-bg {
     background-color: var(--pre-code) !important;
