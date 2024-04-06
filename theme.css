@@ -209,7 +209,7 @@ Window
 
     --status-bar-radius:0px;
 
-    --checkbox-radius: 10px;
+    --checkbox-radius: 1px;
     --checkbox-border-color: var(--color-accent);
     --checkbox-progress-width: 50px;
     --checkbox-progress-border-width: 1px;
