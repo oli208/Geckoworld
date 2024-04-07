@@ -50,3 +50,9 @@ progress checkboxes
 1. Navigate to **Appearances** tab under **Options**
 1. Under the **Themes** section, click on the dropdown menu next to **Theme** heading
 1. Select `Geckoworld` and then you're done! 🎉
+
+
+## Support Me
+If you enjoyed the theme you can support me by clicking the button below. I am currently a student so anything helps.
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E8WL5UF)
