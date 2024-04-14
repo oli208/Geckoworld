@@ -129,31 +129,15 @@ Window
 
 
     /* 2.2 Light theme color variables */
-    --bg1-light: #f6f1dd;
     --bg-light: #ffffff;
     --bg5-light: #dfdbc8;
     --grey1-light: #939f91;
-    --fg-light: #1c1e1f;
 
     --light-main-green: #4ba862;
     --light-main-green-dim: #64bb90;
     --light-main-green-trans: #16af6215;
 
-    --light-red: #f85552;
-    --light-orange: #f57d26;
-    --light-yellow: #ecd033;
     --light-green: #899c40;
-    --light-aqua: #569d79;
-    --light-blue: #5a93a2;
-    --light-purple: #b87b9d;
-
-    --light-dim-red: #f1706f;
-    --light-dim-orange: #f39459;
-    --light-dim-yellow: #fffc3b;
-    --light-dim-green: #a4bb4a;
-    --light-dim-aqua: #6ec398;
-    --light-dim-blue: #6cb3c6;
-    --light-dim-purple: #e092be;
 }
 
 /* 2.3 Dark theme implementation */
@@ -257,12 +241,6 @@ Window
     --code-block: #000000;
     --inline-code: var(--light-green) ;
     
-
-    /* --interactive-accent: var(--light-main-green);
-    --interactive-before: var(--bg5-light);
-    --interactive-accent-rgb: #82dbaf;
-    --interactive-hover: var(--light-main-green); for Calendar Plugin */
-
 
     --vim-cursor: var(--light-main-green);
 
