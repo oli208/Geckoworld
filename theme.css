@@ -142,9 +142,9 @@ Window
 
 /* 2.3 Dark theme implementation */
 .theme-dark {
-    --background-primary-alt: var(--bg-dark);
-    --background-secondary: var(--bg-dark);
-    --background-secondary-alt: var(--bg-dark);
+    --background-primary: var(--bg-dark);
+    --background-primary: var(--bg-dark);
+    --background-primary: var(--bg-dark);
     --background-modifier-border: var(--color-accent);
 
     --ribbon-background: var(--bg-dark);
@@ -210,9 +210,6 @@ Window
 /* 2.4 Light theme implementation */
 .theme-light {
     --background-primary: var(--bg-light);
-    --background-primary-alt: var(--bg-light);
-    --background-secondary: var(--bg-light);
-    --background-secondary-alt: var(--bg-light);
     --background-modifier-border: var(--light-main-green);
 
     --text-normal: #000000;
@@ -319,7 +316,7 @@ mark {
 
 
 .callout .callout-title {
-    background-color: var(--background-secondary);
+    background-color: var(--background-primary);
     margin-top: -28px;
     z-index: 100;
     width: fit-content;
@@ -379,12 +376,12 @@ body.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
 
 
 .workspace-ribbon.mod-right.is-collapsed {
-    border-left-color: var(--background-secondary-alt);
+    border-left-color: var(--background-primary);
 }
 
 
 .workspace-ribbon.mod-left.is-collapsed {
-    border-right-color: var(--background-secondary-alt);
+    border-right-color: var(--background-primary);
 }
 
 .workspace-ribbon-collapse-btn {
@@ -636,7 +633,7 @@ tbody > tr:hover {
 }
 
 .table-view-table > tbody > tr{
-    background-color: var(--background-primary-alt) !important;
+    background-color: var(--background-primary) !important;
 }
 
 .table-view-table > tbody > tr:hover{
@@ -660,11 +657,11 @@ tbody > tr:hover {
 
 /* Window */
 .workspace-split.mod-root .view-content{
-    background-color: var(--background-secondary);
+    background-color: var(--background-primary);
 }
 
 .view-header{
-    background-color: var(--background-secondary);
+    background-color: var(--background-primary);
 }
 
 /* Scrollbar */
@@ -704,12 +701,12 @@ tbody > tr:hover {
 }
 
 .workspace-tab-header.is-active{
-    background-color: var(--background-secondary);
+    background-color: var(--background-primary);
 } 
      
 .workspace .mod-root .workspace-tabs.mod-stacked 
 .workspace-tab-container .workspace-tab-header {
-    background-color: var(--background-secondary);
+    background-color: var(--background-primary);
     width: 25px;
 }
 
