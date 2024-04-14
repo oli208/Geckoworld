@@ -95,6 +95,22 @@ Window
 	--accent-l: 48%; */
 
 
+    --callout-radius: 0px;
+
+    --status-bar-radius: 0px;
+
+    --checkbox-radius: 1px;
+    --checkbox-border-color: var(--color-accent);
+    --checkbox-progress-width: 50px;
+    --checkbox-progress-border-width: 1px;
+    --checkbox-progress-height: 12px;
+    --checkbox-progress-background: initial;
+    --checkbox-progress-unit-frac: 0.2;
+    --checkbox-progress-animation-time: 600ms;
+
+    --table-border-width: 0px;
+    --table-header-border-width: 0px;
+
 
     /* 2.1 Dark theme color variables */
     --bg0-dark: #22282c;
@@ -130,7 +146,6 @@ Window
 
     /* 2.2 Light theme color variables */
     --bg-light: #ffffff;
-    --bg5-light: #dfdbc8;
     --grey1-light: #939f91;
 
     --light-main-green: #4ba862;
@@ -189,21 +204,7 @@ Window
 	--tab-radius-active: 0px;
     /* --tab-stacked-header-width: 20px; */
 
-    --callout-radius: 0px;
-
-    --status-bar-radius:0px;
-
-    --checkbox-radius: 1px;
-    --checkbox-border-color: var(--color-accent);
-    --checkbox-progress-width: 50px;
-    --checkbox-progress-border-width: 1px;
-    --checkbox-progress-height: 12px;
-    --checkbox-progress-background: initial;
-    --checkbox-progress-unit-frac: 0.2;
-    --checkbox-progress-animation-time: 600ms;
-
-    --table-border-width: 0px;
-    --table-header-border-width: 0 px;
+ 
 
 }
 
