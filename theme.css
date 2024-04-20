@@ -165,6 +165,8 @@ Window
     --ribbon-background: var(--bg-dark);
     --ribbon-background-collapsed: var(--bg-dark);
 
+    --tab-text-color-focused-active-current: var(--color-accent-2); 
+
     --text-normal: var(--fg-dark);
     --text-faint: #859289;
     --inline-title-color: var(--color-accent);
@@ -708,10 +710,33 @@ tbody > tr:hover {
     padding-bottom: 0px;
 }
 
-.workspace-tab-header.is-active{
-    background-color: var(--background-primary);
+.mod-active .workspace-tab-header.is-active {
+    background-color: var(--background-secondary);
+    box-shadow: inset 0px 4px 0px 0px var(--tab-outline-color);
+    transition: box-shadow 0.4s ease-in-out;
 } 
-     
+
+.mod-active .workspace-tab-header {
+    margin: 0px 2px;
+    background-color: var(--background-secondary);
+    box-shadow: inset 0px 0.5px 0px 0px var(--tab-outline-color);
+    transition: box-shadow 0.4s ease-in-out;
+} 
+
+.workspace-tab-header.is-active .workspace-tab-header-inner-close-button {
+    color: var(--color-accent-1);
+}
+
+.workspace-tab-header.is-active .workspace-tab-header-inner-close-button:hover {
+    color: var(--color-accent-2);
+}
+
+.mod-root .workspace-tab-header-container-inner{
+    padding: 0px;
+    margin: 4px 0px calc(var(--tab-outline-width) * -0.2)
+}
+
+
 .workspace .mod-root .workspace-tabs.mod-stacked 
 .workspace-tab-container .workspace-tab-header {
     background-color: var(--background-primary);
