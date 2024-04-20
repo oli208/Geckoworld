@@ -7,7 +7,7 @@ User interface replacement for Obsidian.
 Designed to be used with the Hider plugin.
 
 Readme:
-https://github.com/kepano/geckoworld
+https://github.com/oli208/geckoworld
 
 -----------------------------------------------------------------------------
 
@@ -95,6 +95,22 @@ Window
 	--accent-l: 48%; */
 
 
+    --callout-radius: 0px;
+
+    --status-bar-radius: 0px;
+
+    --checkbox-radius: 1px;
+    --checkbox-border-color: var(--color-accent);
+    --checkbox-progress-width: 50px;
+    --checkbox-progress-border-width: 1px;
+    --checkbox-progress-height: 12px;
+    --checkbox-progress-background: initial;
+    --checkbox-progress-unit-frac: 0.2;
+    --checkbox-progress-animation-time: 600ms;
+
+    --table-border-width: 0px;
+    --table-header-border-width: 0px;
+
 
     /* 2.1 Dark theme color variables */
     --bg0-dark: #22282c;
@@ -129,38 +145,21 @@ Window
 
 
     /* 2.2 Light theme color variables */
-    --bg1-light: #f6f1dd;
     --bg-light: #ffffff;
-    --bg5-light: #dfdbc8;
     --grey1-light: #939f91;
-    --fg-light: #1c1e1f;
 
     --light-main-green: #4ba862;
     --light-main-green-dim: #64bb90;
     --light-main-green-trans: #16af6215;
 
-    --light-red: #f85552;
-    --light-orange: #f57d26;
-    --light-yellow: #ecd033;
     --light-green: #899c40;
-    --light-aqua: #569d79;
-    --light-blue: #5a93a2;
-    --light-purple: #b87b9d;
-
-    --light-dim-red: #f1706f;
-    --light-dim-orange: #f39459;
-    --light-dim-yellow: #fffc3b;
-    --light-dim-green: #a4bb4a;
-    --light-dim-aqua: #6ec398;
-    --light-dim-blue: #6cb3c6;
-    --light-dim-purple: #e092be;
 }
 
 /* 2.3 Dark theme implementation */
 .theme-dark {
-    --background-primary-alt: var(--bg-dark);
+    --background-primary: var(--bg-dark);
     --background-secondary: var(--bg-dark);
-    --background-secondary-alt: var(--bg-dark);
+
     --background-modifier-border: var(--color-accent);
 
     --ribbon-background: var(--bg-dark);
@@ -205,31 +204,19 @@ Window
 	--tab-radius-active: 0px;
     /* --tab-stacked-header-width: 20px; */
 
-    --callout-radius: 0px;
-
-    --status-bar-radius:0px;
-
-    --checkbox-radius: 1px;
-    --checkbox-border-color: var(--color-accent);
-    --checkbox-progress-width: 50px;
-    --checkbox-progress-border-width: 1px;
-    --checkbox-progress-height: 12px;
-    --checkbox-progress-background: initial;
-    --checkbox-progress-unit-frac: 0.2;
-    --checkbox-progress-animation-time: 600ms;
-
-    --table-border-width: 0px;
-    --table-header-border-width: 0 px;
+ 
 
 }
 
 /* 2.4 Light theme implementation */
 .theme-light {
     --background-primary: var(--bg-light);
-    --background-primary-alt: var(--bg-light);
     --background-secondary: var(--bg-light);
-    --background-secondary-alt: var(--bg-light);
-    --background-modifier-border: var(--light-main-green);
+    --background-modifier-border: var(--color-accent);
+
+    --ribbon-background: var(--bg-light);
+    --ribbon-background-collapsed: var(--bg-light);
+
 
     --text-normal: #000000;
     --text-faint: var(--grey1-light);
@@ -240,37 +227,33 @@ Window
     --text-title-h5: #4190d1;
     --text-title-h6: #8540b3;
 
-    --text-link: #2aa065;
-    --text-a: #008643;
-    --text-a-hover: #00b45a;
-    --text-selection: var(--light-main-green-trans);
-    --text-accent: var(--light-main-green);
+    --text-a: var(--color-accent);
+    --text-a-hover: var(--color-accent-1);
+    --text-selection: var(--color-accent);
+    --text-accent: var(--color-accent);
 
-    --text-highlight-bg: #fffc3b;
-    --text-highlight-bold: var(--light-main-green);
-    --text-highlight-italic: #f6901c;
-    --text-highlight-underline: #6cb3c6;
-    --text-highlight-crossedout: #db5555;
-    --text-mark: #b5d146;
+    --text-highlight-bg: hsla(var(--accent-h), 80%, 80%, 30%);
+    --text-highlight-bold: var(--color-accent-1);
+    --text-highlight-italic: var(--color-accent-1)  ;
+    --text-highlight-crossedout: var(--color-red);
+    --text-selection: hsla(var(--accent-h), 50%, 5s0%, 20%);
+
+    --link-color: var(--color-accent-1);
+    --link-color-hover: var(--color-accent-2);  
+    --link-unresolved-opacity: 0.8;
+
 
     --pre-code: #f0eeee;
     --code-block: #000000;
     --inline-code: var(--light-green) ;
     
 
-    /* --interactive-accent: var(--light-main-green);
-    --interactive-before: var(--bg5-light);
-    --interactive-accent-rgb: #82dbaf;
-    --interactive-hover: var(--light-main-green); for Calendar Plugin */
+    --vim-cursor: var(--color-accent);
 
-
-    --vim-cursor: var(--light-main-green);
-
-    --scrollbar-bg: #404d44;
-    --scrollbar-active-thumb-bg: var(--faded-green);
-    --scrollbar-thumb-bg: var(--dim-green);
-	--tab-radius-active: var(0.1px);
-
+    --scrollbar-bg: var(--color-accent);
+    --scrollbar-active-thumb-bg: var(--color-accent-1);
+    --scrollbar-thumb-bg: var(--color-accent);    
+	--tab-radius-active: 0px;
 }
 
 
@@ -341,7 +324,7 @@ mark {
 
 
 .callout .callout-title {
-    background-color: var(--background-secondary);
+    background-color: var(--background-primary);
     margin-top: -28px;
     z-index: 100;
     width: fit-content;
@@ -401,12 +384,12 @@ body.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
 
 
 .workspace-ribbon.mod-right.is-collapsed {
-    border-left-color: var(--background-secondary-alt);
+    border-left-color: var(--background-primary);
 }
 
 
 .workspace-ribbon.mod-left.is-collapsed {
-    border-right-color: var(--background-secondary-alt);
+    border-right-color: var(--background-primary);
 }
 
 .workspace-ribbon-collapse-btn {
@@ -658,7 +641,7 @@ tbody > tr:hover {
 }
 
 .table-view-table > tbody > tr{
-    background-color: var(--background-primary-alt) !important;
+    background-color: var(--background-primary) !important;
 }
 
 .table-view-table > tbody > tr:hover{
@@ -682,11 +665,11 @@ tbody > tr:hover {
 
 /* Window */
 .workspace-split.mod-root .view-content{
-    background-color: var(--background-secondary);
+    background-color: var(--background-primary);
 }
 
 .view-header{
-    background-color: var(--background-secondary);
+    background-color: var(--background-primary);
 }
 
 /* Scrollbar */
@@ -726,12 +709,12 @@ tbody > tr:hover {
 }
 
 .workspace-tab-header.is-active{
-    background-color: var(--background-secondary);
+    background-color: var(--background-primary);
 } 
      
 .workspace .mod-root .workspace-tabs.mod-stacked 
 .workspace-tab-container .workspace-tab-header {
-    background-color: var(--background-secondary);
+    background-color: var(--background-primary);
     width: 25px;
 }
 
