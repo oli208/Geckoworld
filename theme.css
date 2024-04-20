@@ -7,7 +7,7 @@ User interface replacement for Obsidian.
 Designed to be used with the Hider plugin.
 
 Readme:
-https://github.com/kepano/geckoworld
+https://github.com/oli208/geckoworld
 
 -----------------------------------------------------------------------------
 
@@ -158,8 +158,8 @@ Window
 /* 2.3 Dark theme implementation */
 .theme-dark {
     --background-primary: var(--bg-dark);
-    --background-primary: var(--bg-dark);
-    --background-primary: var(--bg-dark);
+    --background-secondary: var(--bg-dark);
+
     --background-modifier-border: var(--color-accent);
 
     --ribbon-background: var(--bg-dark);
@@ -211,7 +211,12 @@ Window
 /* 2.4 Light theme implementation */
 .theme-light {
     --background-primary: var(--bg-light);
-    --background-modifier-border: var(--light-main-green);
+    --background-secondary: var(--bg-light);
+    --background-modifier-border: var(--color-accent);
+
+    --ribbon-background: var(--bg-light);
+    --ribbon-background-collapsed: var(--bg-light);
+
 
     --text-normal: #000000;
     --text-faint: var(--grey1-light);
@@ -222,31 +227,33 @@ Window
     --text-title-h5: #4190d1;
     --text-title-h6: #8540b3;
 
-    --text-link: #2aa065;
-    --text-a: #008643;
-    --text-a-hover: #00b45a;
-    --text-selection: var(--light-main-green-trans);
-    --text-accent: var(--light-main-green);
+    --text-a: var(--color-accent);
+    --text-a-hover: var(--color-accent-1);
+    --text-selection: var(--color-accent);
+    --text-accent: var(--color-accent);
 
-    --text-highlight-bg: #fffc3b;
-    --text-highlight-bold: var(--light-main-green);
-    --text-highlight-italic: #f6901c;
-    --text-highlight-underline: #6cb3c6;
-    --text-highlight-crossedout: #db5555;
-    --text-mark: #b5d146;
+    --text-highlight-bg: hsla(var(--accent-h), 80%, 80%, 30%);
+    --text-highlight-bold: var(--color-accent-1);
+    --text-highlight-italic: var(--color-accent-1)  ;
+    --text-highlight-crossedout: var(--color-red);
+    --text-selection: hsla(var(--accent-h), 50%, 5s0%, 20%);
+
+    --link-color: var(--color-accent-1);
+    --link-color-hover: var(--color-accent-2);  
+    --link-unresolved-opacity: 0.8;
+
 
     --pre-code: #f0eeee;
     --code-block: #000000;
     --inline-code: var(--light-green) ;
     
 
-    --vim-cursor: var(--light-main-green);
+    --vim-cursor: var(--color-accent);
 
-    --scrollbar-bg: #404d44;
-    --scrollbar-active-thumb-bg: var(--faded-green);
-    --scrollbar-thumb-bg: var(--dim-green);
-	--tab-radius-active: var(0.1px);
-
+    --scrollbar-bg: var(--color-accent);
+    --scrollbar-active-thumb-bg: var(--color-accent-1);
+    --scrollbar-thumb-bg: var(--color-accent);    
+	--tab-radius-active: 0px;
 }
 
 
