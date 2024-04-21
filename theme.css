@@ -725,6 +725,10 @@ tbody > tr:hover {
     transition: box-shadow 0.4s ease-in-out;
 } 
 
+.workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header{
+    margin: 0;
+}
+
 .workspace-tab-header.is-active .workspace-tab-header-inner-close-button {
     color: var(--color-accent-1);
 }
