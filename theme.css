@@ -725,6 +725,28 @@ tbody > tr:hover {
     transition: box-shadow 0.4s ease-in-out;
 } 
 
+
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon{
+    color: rgb(136, 136, 136); /*icon in stacked view*/
+
+}
+
+.mod-root .workspace-tabs.mod-stacked .workspace-tab-header {
+    color: rgb(136, 136, 136); /*Filetitle in stacked view*/
+}
+
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
+    box-shadow: -1px 0 0 0 #7e7e7e;
+}
+
+
+.mod-root .workspace-tabs.mod-stacked .workspace-tab-header.is-active.mod-active {
+    color: var(--color-accent);
+    border-left: 2px solid var(--color-accent);
+    transition: border 0.2s ease-in-out;
+
+}
+
 .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header{
     margin: 0;
 }
@@ -736,6 +758,13 @@ tbody > tr:hover {
 .workspace-tab-header.is-active .workspace-tab-header-inner-close-button:hover {
     color: var(--color-accent-2);
 }
+
+.mod-root .workspace-tabs.mod-stacked .workspace-tab-header.is-active.mod-active .workspace-tab-header-inner-close-button,
+.mod-root .workspace-tabs.mod-stacked .workspace-tab-header.is-active.mod-active .workspace-tab-header-inner-icon svg,
+.workspace-tabs.mod-stacked .workspace-tab-header.is-active.mod-active .workspace-tab-header-inner-title {
+    color: var(--color-accent-1);
+}
+
 
 .mod-root .workspace-tab-header-container-inner{
     padding: 0px;
@@ -782,7 +811,7 @@ tbody > tr:hover {
 }
  
 .workspace-tab-header-inner-icon{
-    color: var(--color-accent-1) !important;
+    color: gray;
 }
 
 .workspace .mod-root .workspace-tab-header{
