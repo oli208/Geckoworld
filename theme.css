@@ -193,6 +193,15 @@ Window
     --link-unresolved-opacity: 0.8;
 
 
+    --icon-color: rgb(161, 161, 161);
+    --icon-color-hover: var(--color-accent-2); /*darker*/
+    --icon-color-focused: var(--color-accent-1); /*brither*/
+
+    --tab-text-color-focused-active-current: var(--color-accent-1);
+
+    --background-modifier-hover: rgba(0, 0, 0,0);
+
+
    /* --interactive-accent: var(--dim-aqua); */
     --interactive-before: #343b3f;
     --interactive-after: #415140;
@@ -245,6 +254,14 @@ Window
     --link-color-hover: var(--color-accent-2);  
     --link-unresolved-opacity: 0.8;
 
+
+    --icon-color: rgb(100, 100, 100);
+    --icon-color-hover: var(--color-accent-2); /*brithter*/
+    --icon-color-focused: var(--color-accent-1); /*darker*/
+
+    --tab-text-color-focused-active-current: var(--color-accent-1);
+
+    --background-modifier-hover: rgba(0, 0, 0,0);
 
     --pre-code: #f0eeee;
     --code-block: #000000;
