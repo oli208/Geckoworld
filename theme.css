@@ -852,6 +852,7 @@ tbody > tr:hover {
     padding-left: 3px; 
     border-left: 5px solid var(--interactive-accent);
     background-color: var(--interactive-before);
+    transition: border 0.3s ease-in-out;
 }
 
 .nav-file-title.is-active:hover {
