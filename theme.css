@@ -850,14 +850,17 @@ tbody > tr:hover {
 
 .nav-file-title.is-active {
     padding-left: 3px; 
-    border-left: 5px solid var(--interactive-accent);
-    background-color: var(--interactive-before);
-    transition: border 0.3s ease-in-out;
+    border-left: 5px solid var(--dark-green-main);
+    background-color: var(--dark-green-trans) !important;
+    transition: border 0.3s ease-in;
+    transition: background-color 0.3s ease-in;
+
 }
 
 .nav-file-title.is-active:hover {
-    border-left: 5px solid var(--interactive-accent);
-    background-color: var(--interactive-after);
+    border-left: 5px solid var(--dark-green-dim);
+    background-color: var(--dark-main-green-dim) !important;
+    color: var(--dark-main-green-dim) !important;
 }
 
 
