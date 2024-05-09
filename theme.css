@@ -192,6 +192,7 @@ Window
 
     --icon-color: var(--color-dark-interactive);
     --icon-color-hover: var(--color-dark-green-dim); 
+    --icon-color-active: var(--color-dark-green-main);
     --icon-color-focused: var(--color-dark-green-main); 
 
     --tab-outline-color: var(--color-dark-green-main);
@@ -762,17 +763,17 @@ tbody > tr:hover {
 }
 
 .workspace-tab-header.is-active .workspace-tab-header-inner-close-button {
-    color: var(--color-accent-1);
+    color: var(--icon-color);
 }
 
 .workspace-tab-header.is-active .workspace-tab-header-inner-close-button:hover {
-    color: var(--color-accent-2);
+    color: var(--icon-color-hover);
 }
 
 .mod-root .workspace-tabs.mod-stacked .workspace-tab-header.is-active.mod-active .workspace-tab-header-inner-close-button,
 .mod-root .workspace-tabs.mod-stacked .workspace-tab-header.is-active.mod-active .workspace-tab-header-inner-icon svg,
 .workspace-tabs.mod-stacked .workspace-tab-header.is-active.mod-active .workspace-tab-header-inner-title {
-    color: var(--color-accent-1);
+    color: var(--icon-color-active);
 }
 
 
@@ -858,9 +859,9 @@ tbody > tr:hover {
 /*Icons*/
 /*Properties */
 .metadata-property-icon{
-    color: var(--color-accent);
+    color: var(--icon-color-active);
 }
 
 .metadata-property-icon:hover{
-    color: var(--color-accent-1);
+    color: var(--icon-color-hover);
 }
