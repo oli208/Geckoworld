@@ -116,32 +116,22 @@ Window
     --bg0-dark: #22282c;
     --bg1-dark: #272f34;
 
-    --bg-dark: #181818;
-    --shadow: #00000070;
-    --fg-dark: #ffffff;
+    --color-dark-green-main: #4D755A;
+    --color-dark-green-dim: #3D5D48;
+    --color-dark-green-light: #70907B;
+    --color-dark-green-dark: #3D5D48;
+    --color-dark-green-trans: #4D755A33;
 
-	--dark-main: var(--color-accent);
-	--dark-main-dim: hsl(var(--accent-h), var(--accent-s), var(--accent-l)); 
-    --dark-main-light: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 30.8%));
+    --color-dark-lime: #5E8B48;
+    --color-dark-yellow: #B39E4F;
+    --color-dark-orange: #CA7337;
+    --color-dark-red: #B25555;
+    --color-dark-purple: #795994;
 
-	--dark-main-trans: rgba(var(--color-accent), 0.3);
-
-    --color-accent-3: hsl(calc(var(--accent-h) - 3), calc(var(--accent-s) * 1.02), calc(var(--accent-l) * 1.15));
-    --faded-red: #d48c8d;
-    --faded-orange: #e69875;
-    --faded-yellow: #dbbc7f;
-    --faded-green: #a7c080;
-    --faded-aqua: #83c092;
-    --faded-blue: #7fbbb3;
-    --faded-purple: #d699b6;
-
-    --dim-red: #da6362;
-    --dim-orange: #d77f48;
-    --dim-yellow: #bf983d;
-    --dim-green: #899c40;
-    --dim-aqua: #569d79;
-    --dim-blue: #5a93a2;
-    --dim-purple: #b87b9d;
+    --color-dark-fg: #ffffff;
+    --color-dark-bg: #181818;
+    
+    --color-dark-interactive: #b3b3b3;
 
 
     /* 2.2 Light theme color variables */
