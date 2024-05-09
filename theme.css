@@ -100,7 +100,6 @@ Window
     --status-bar-radius: 0px;
 
     --checkbox-radius: 1px;
-    --checkbox-border-color: var(--color-accent);
     --checkbox-progress-width: 50px;
     --checkbox-progress-border-width: 1px;
     --checkbox-progress-height: 12px;
@@ -113,8 +112,6 @@ Window
 
 
     /* 2.1 Dark theme color variables */
-    --bg0-dark: #22282c;
-    --bg1-dark: #272f34;
 
     --color-dark-green-main: #4D755A;
     --color-dark-green-dim: #3D5D48;
@@ -295,7 +292,8 @@ em,
 }
 
 .cm-highlight {
-    color: var(--text-mark) !important;
+    color: var(--background-primary) !important;
+    /* background-color: var(--text-highlight-bg) !important; */
 }
 
 del,
@@ -411,7 +409,7 @@ body.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
 }
 
 .workspace-ribbon-collapse-btn:hover {
-    color: var(--light-main-green-dim);
+    color: var(--color-dark-main-green-dim);
 }
 
 .markdown-embed-title {
@@ -705,13 +703,13 @@ tbody > tr:hover {
 .workspace-ribbon{
 	border-radius: 0px;
 	border-width: 0.1px;
-	border-color: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+	border-color: var(--background-modifier-border);
 }
 
 
 .workspace-ribbon.mod-left:before{
 	border-radius: 0.1px;
-	border-bottom: solid var(--color-accent) 0.5px
+	border-bottom: solid var(--background-modifier-border) 0.5px
 }
 
 
@@ -738,12 +736,12 @@ tbody > tr:hover {
 
 
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon{
-    color: rgb(136, 136, 136); /*icon in stacked view*/
+    color: var(--color-dark-interactive); /*icon in stacked view*/
 
 }
 
 .mod-root .workspace-tabs.mod-stacked .workspace-tab-header {
-    color: rgb(136, 136, 136); /*Filetitle in stacked view*/
+    color: var(--color-dark-interactive); /*Filetitle in stacked view*/
 }
 
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
@@ -752,10 +750,10 @@ tbody > tr:hover {
 
 
 .mod-root .workspace-tabs.mod-stacked .workspace-tab-header.is-active.mod-active {
-    color: var(--color-accent);
-    border-left: 2px solid var(--color-accent);
+    color: var(--background-modifier-border);
+    box-shadow: none;
+    border-left: 1px solid var(--background-modifier-border);
     transition: border 0.2s ease-in-out;
-
 }
 
 .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header{
@@ -817,12 +815,11 @@ tbody > tr:hover {
 .mod-left-split .workspace-tab-header.is-active:hover,
 .mod-right-split .workspace-tab-header:hover,
 .mod-right-split .workspace-tab-header.is-active:hover{
-    background-color: transparent;
-
+    background-color: none;
 }
  
 .workspace-tab-header-inner-icon{
-    color: gray;
+    color: var(--color-dark-interactive);
 }
 
 .workspace .mod-root .workspace-tab-header{
