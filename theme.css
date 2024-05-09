@@ -198,6 +198,9 @@ Window
     --tab-text-color-focused-active-current: var(--color-dark-green-main);
 	--tab-radius-active: 0px;
     
+    --nav-item-color-hover: var(--color-dark-green-light);
+    --nav-item-color-highlighted: var(--color-dark-green-light);
+    --nav-item-background-active: var(--color-dark-green-trans);
     --nav-item-background-selected: var(--color-dark-green-trans);
 
     --scrollbar-bg: var(--color-dark-green-main);
@@ -840,17 +843,14 @@ tbody > tr:hover {
 
 .nav-file-title.is-active {
     padding-left: 3px; 
-    border-left: 5px solid var(--dark-green-main);
-    background-color: var(--dark-green-trans) !important;
+    border-left: 5px solid var(--interactive-accent);
     transition: border 0.3s ease-in;
     transition: background-color 0.3s ease-in;
 
 }
 
 .nav-file-title.is-active:hover {
-    border-left: 5px solid var(--dark-green-dim);
-    background-color: var(--dark-main-green-dim) !important;
-    color: var(--dark-main-green-dim) !important;
+    border-left: 5px solid var(--interactive-accent-hover);
 }
 
 
