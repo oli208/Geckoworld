@@ -156,6 +156,9 @@ Window
     --ribbon-background: var(--color-dark-bg);
     --ribbon-background-collapsed: var(--color-dark-bg);
 
+    --interactive-accent: var(--color-dark-green-main);
+    --interactive-accent-hover: var(--color-dark-green-dim);
+
     --tab-text-color-focused-active-current: var(--color-dark-green-light); 
 
     --inline-title-color: var(--color-dark-green-main);
