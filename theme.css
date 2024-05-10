@@ -695,6 +695,12 @@ tbody > tr:hover {
     width: 8px !important;
 }
 
+/* Suggestion */
+
+.suggestion-item.is-selected {
+    background-color: var(--nav-item-background-selected);
+}
+
 
 /* Divider */
 
@@ -829,6 +835,11 @@ tbody > tr:hover {
 
 .workspace .mod-root .workspace-tab-header{
     padding: 0px;
+}
+
+
+.search-result-file-match:hover{
+    background-color: var(--nav-item-background-selected);
 }
 
 /*File nav*/
