@@ -316,9 +316,9 @@ a:hover,
 .cm-url {
     text-decoration: none !important;
 }
-
-mark {
-    background-color: var(--text-highlight-bg) !important;
+ /*Footnotes*/
+.cm-s-obsidian span.cm-footref, .cm-s-obsidian span.cm-blockid {
+color: var(--color-accent);
 }
 
 
