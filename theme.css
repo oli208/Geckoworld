@@ -206,9 +206,13 @@ Window
     --scrollbar-thumb-bg: var(--color-dark-green-main);    
 
     --table-header-border-color: var(--color-accent);
+    --checkbox-color: var(--color-accent);
+    --checkbox-color-hover: var(--color-accent-1);
     --checkbox-border-color: var(--color-accent);
     --list-marker-color: var(--color-accent);
     --vim-cursor: var(--color-dark-green-main);
+
+    --callout-radius: 0px;
 }
 
 /* 2.4 Light theme implementation */
