@@ -95,7 +95,6 @@ Window
 	--accent-l: 48%; */
 
 
-    --callout-radius: 0px;
 
     --status-bar-radius: 0px;
 
@@ -173,7 +172,7 @@ Window
 
     --code-block: var(--color-dark-fg);
 
-
+    --inline-title-weight: 800;
     --text-highlight-bg: hsla(var(--accent-h), 95%, 75%, 80%);
     --text-highlight-bold: var(--color-accent);
     --text-highlight-italic: var(--color-accent);
@@ -418,7 +417,7 @@ body.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
 }
 
 .markdown-embed-title {
-    font-weight: 600 !important;
+    font-weight: 800 !important;
 }
 
 .markdown-embed {
@@ -430,42 +429,42 @@ body.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
 
 .cm-header-1,
 .markdown-preview-section h1 {
-    font-weight: 800 !important;
+    font-weight: 800;
     font-size: 30px !important;
     color: var(--text-title-h1) !important;
 }
 
 .cm-header-2,
 .markdown-preview-section h2 {
-    font-weight: 700 !important;
+    font-weight: 700;
     font-size: 22px !important;
     color: var(--text-title-h2) !important;
 }
 
 .cm-header-3,
 .markdown-preview-section h3 {
-    font-weight: 600 !important;
+    font-weight: 600;
     font-size: 20px !important;
     color: var(--text-title-h3) !important;
 }
 
 .cm-header-4,
 .markdown-preview-section h4 {
-    font-weight: 500 !important;
+    font-weight: 500;
     font-size: 18px !important;
     color: var(--text-title-h4) !important;
 }
 
 .cm-header-5,
 .markdown-preview-section h5 {
-    font-weight: 500 !important;
+    font-weight: 500;
     font-size: 18px !important;
     color: var(--text-title-h5) !important;
 }
 
 .cm-header-6,
 .markdown-preview-section h6 {
-    font-weight: 500 !important;
+    font-weight: 400;
     font-size: 18px !important;
     color: var(--text-title-h6) !important;
 }
