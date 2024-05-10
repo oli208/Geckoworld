@@ -295,7 +295,8 @@ em,
     color: var(--text-highlight-italic) !important;
 }
 
-.cm-highlight {
+.cm-highlight,
+.markdown-rendered mark  {
     color: var(--background-primary) !important;
     /* background-color: var(--text-highlight-bg) !important; */
 }
