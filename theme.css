@@ -184,8 +184,9 @@ Window
 
     --link-color: var(--color-accent);
     --link-color-hover: var(--color-accent-1);
+    --link-external-color: var(--color-accent);
     --link-unresolved-color: var(--color-accent);
-    --link-unresolved-opacity: 0.8;
+    --link-unresolved-opacity: 0.7;
 
     --icon-color: var(--color-dark-interactive);
     --icon-color-hover: var(--color-dark-green-dim);
