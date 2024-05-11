@@ -75,32 +75,30 @@ Window
 
 */
 
-/* Foundations */ 
+/* Foundations */
 /* Typography */
 
 @font-face {
     font-family: "iA Writer QuattroV";
 
     src: url("fonts/iAWriterQuattroS-Regular.eot") format("embedded-opentype"),
-      url("fonts/iAWriterQuattroS-Regular.woff2") format("woff2"),
-      url("fonts/iAWriterQuattroS-Regular.woff") format("woff"),
-      url("iAWriterQuattroV.ttf") format('truetype');
-  }
+        url("fonts/iAWriterQuattroS-Regular.woff2") format("woff2"),
+        url("fonts/iAWriterQuattroS-Regular.woff") format("woff"),
+        url("iAWriterQuattroV.ttf") format('truetype');
+}
 
 /* Colors */
 :root {
-	/*default accent colors*/
-	/* --accent-h:	135;	
+    /*default accent colors*/
+    /* --accent-h:	135;	
 	--accent-s:	38%;
 	--accent-l: 48%; */
 
 
-    --callout-radius: 0px;
 
     --status-bar-radius: 0px;
 
     --checkbox-radius: 1px;
-    --checkbox-border-color: var(--color-accent);
     --checkbox-progress-width: 50px;
     --checkbox-progress-border-width: 1px;
     --checkbox-progress-height: 12px;
@@ -113,35 +111,23 @@ Window
 
 
     /* 2.1 Dark theme color variables */
-    --bg0-dark: #22282c;
-    --bg1-dark: #272f34;
 
-    --bg-dark: #181818;
-    --shadow: #00000070;
-    --fg-dark: #ffffff;
+    --color-dark-green-main: #4D755A;
+    --color-dark-green-dim: #3D5D48;
+    --color-dark-green-light: #70907B;
+    --color-dark-green-dark: #3D5D48;
+    --color-dark-green-trans: #4D755A33;
 
-	--dark-main: var(--color-accent);
-	--dark-main-dim: hsl(var(--accent-h), var(--accent-s), var(--accent-l)); 
-    --dark-main-light: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 30.8%));
+    --color-dark-lime: #5E8B48;
+    --color-dark-yellow: #B39E4F;
+    --color-dark-orange: #CA7337;
+    --color-dark-red: #B25555;
+    --color-dark-purple: #795994;
 
-	--dark-main-trans: rgba(var(--color-accent), 0.3);
+    --color-dark-fg: #ffffff;
+    --color-dark-bg: #181818;
 
-    --color-accent-3: hsl(calc(var(--accent-h) - 3), calc(var(--accent-s) * 1.02), calc(var(--accent-l) * 1.15));
-    --faded-red: #d48c8d;
-    --faded-orange: #e69875;
-    --faded-yellow: #dbbc7f;
-    --faded-green: #a7c080;
-    --faded-aqua: #83c092;
-    --faded-blue: #7fbbb3;
-    --faded-purple: #d699b6;
-
-    --dim-red: #da6362;
-    --dim-orange: #d77f48;
-    --dim-yellow: #bf983d;
-    --dim-green: #899c40;
-    --dim-aqua: #569d79;
-    --dim-blue: #5a93a2;
-    --dim-purple: #b87b9d;
+    --color-dark-interactive: #b3b3b3;
 
 
     /* 2.2 Light theme color variables */
@@ -157,67 +143,76 @@ Window
 
 /* 2.3 Dark theme implementation */
 .theme-dark {
-    --background-primary: var(--bg-dark);
-    --background-secondary: var(--bg-dark);
-    --background-secondary-alt: var(--bg-dark);
-    --background-modifier-border: var(--color-accent);
-    --background-modifier-hover: hsl(var(--accent-h), 50%, 50%, 20%);;
+    --background-primary: var(--color-dark-bg);
+    --background-secondary: var(--color-dark-bg);
+    --background-secondary-alt: var(--color-dark-bg);
+    --background-modifier-border: var(--color-dark-green-main);
+    --background-modifier-hover: rgba(0, 0, 0, 0);
 
-    --ribbon-background: var(--bg-dark);
-    --ribbon-background-collapsed: var(--bg-dark);
+    --ribbon-background: var(--color-dark-bg);
+    --ribbon-background-collapsed: var(--color-dark-bg);
 
-    --tab-text-color-focused-active-current: var(--color-accent-2); 
+    --interactive-accent: var(--color-dark-green-main);
+    --interactive-accent-hover: var(--color-dark-green-dim);
 
-    --text-normal: var(--fg-dark);
-    --text-faint: #859289;
-    --inline-title-color: var(--color-accent);
-    --text-title-h1: hsl(calc(var(--accent-h) + 40), var(--accent-s), var(--accent-l)) /*var(--dim-red)*/;
-    --text-title-h2: hsl(calc(var(--accent-h) + 80), var(--accent-s), var(--accent-l));
-    --text-title-h3: hsl(calc(var(--accent-h) + 120), var(--accent-s), var(--accent-l));
-    --text-title-h4: hsl(calc(var(--accent-h) + 160), var(--accent-s), var(--accent-l));
-    --text-title-h5: hsl(calc(var(--accent-h) + 200), var(--accent-s), var(--accent-l));
-    --text-title-h6: hsl(calc(var(--accent-h) + 240), var(--accent-s), var(--accent-l));
+    --tab-text-color-focused-active-current: var(--color-dark-green-light);
 
-    --pre-code: var(--bg1-dark);
-    --text-highlight-bg: hsla(var(--accent-h), 50%, 20%, 70%);
-    --text-highlight-bold: var(--color-accent-1);
-    --text-highlight-italic: var(--color-accent-1)  ;
-    /* --text-mark: var(--faded-blue); */
-    /* --text-highlight-underline: hsl(var(--accent-h), 100%, 70%); */
-    --text-highlight-crossedout: var(--faded-red);
-    --text-selection: hsla(var(--accent-h), 50%, 30%, 50%);
+    --inline-title-color: var(--color-dark-green-main);
+    --text-title-h1: var(--color-dark-green-main);
+    --text-title-h2: var(--color-dark-lime);
+    --text-title-h3: var(--color-dark-yellow);
+    --text-title-h4: var(--color-dark-orange);
+    --text-title-h5: var(--color-dark-red);
+    --text-title-h6: var(--color-dark-purple);
+    --text-accent: var(--color-dark-green-main);
+
+    --text-normal: var(--color-dark-fg);
+    --text-faint: var(--color-dark-green-light);
+
+
+    --code-block: var(--color-dark-fg);
+
+    --inline-title-weight: 800;
+    --text-highlight-bg: hsla(var(--accent-h), 95%, 75%, 80%);
+    --text-highlight-bold: var(--color-accent);
+    --text-highlight-italic: var(--color-accent);
+    --text-highlight-crossedout: var(--color-dark-red);
     
+    --text-mark: var(--color-dark-green-trans);
+    --text-selection: hsla(var(--accent-h), 50%, 30%, 50%);
+    --hr-color: var(--color-accent);
 
-    --link-color: var(--color-accent-1);
-    --link-color-hover: var(--color-accent-2);  
+    --link-color: var(--color-accent);
+    --link-color-hover: var(--color-accent-1);
+    --link-unresolved-color: var(--color-accent);
     --link-unresolved-opacity: 0.8;
 
+    --icon-color: var(--color-dark-interactive);
+    --icon-color-hover: var(--color-dark-green-dim);
+    --icon-color-active: var(--color-dark-green-main);
+    --icon-color-focused: var(--color-dark-green-main);
 
-    --icon-color: rgb(161, 161, 161);
-    --icon-color-hover: var(--color-accent-2); /*darker*/
-    --icon-color-focused: var(--color-accent-1); /*brither*/
+    --tab-outline-color: var(--color-dark-green-main);
+    --tab-text-color-focused-active-current: var(--color-dark-green-main);
+    --tab-radius-active: 0px;
 
-    --tab-text-color-focused-active-current: var(--color-accent-1);
+    --nav-item-color-hover: var(--color-dark-green-light);
+    --nav-item-color-highlighted: var(--color-dark-green-light);
+    --nav-item-background-active: var(--color-dark-green-trans);
+    --nav-item-background-selected: var(--color-dark-green-trans);
 
-    --background-modifier-hover: rgba(0, 0, 0,0);
+    --scrollbar-bg: var(--color-dark-green-main);
+    --scrollbar-active-thumb-bg: var(--color-dark-green-main);
+    --scrollbar-thumb-bg: var(--color-dark-green-main);
 
+    --table-header-border-color: var(--color-accent);
+    --checkbox-color: var(--color-accent);
+    --checkbox-color-hover: var(--color-accent-1);
+    --checkbox-border-color: var(--color-accent);
+    --list-marker-color: var(--color-accent);
+    --vim-cursor: var(--color-dark-green-main);
 
-   /* --interactive-accent: var(--dim-aqua); */
-    --interactive-before: #343b3f;
-    --interactive-after: #415140;
-    --text-accent: var(--color-accent);
-    /* --interactive-accent-rgb: var(--dim-blue); */
-    --inline-code: var(--dim-blue);
-    --code-block: var(--fg-dark);
-    --vim-cursor: var(--faded-blue);
-    --scrollbar-bg: var(--color-accent);
-    --scrollbar-active-thumb-bg: var(--color-accent-1);
-    --scrollbar-thumb-bg: var(--color-accent);    
-	--tab-radius-active: 0px;
-    /* --tab-stacked-header-width: 20px; */
-
- 
-
+    --callout-radius: 0px;
 }
 
 /* 2.4 Light theme implementation */
@@ -246,34 +241,36 @@ Window
 
     --text-highlight-bg: hsla(var(--accent-h), 80%, 80%, 30%);
     --text-highlight-bold: var(--color-accent-1);
-    --text-highlight-italic: var(--color-accent-1)  ;
+    --text-highlight-italic: var(--color-accent-1);
     --text-highlight-crossedout: var(--color-red);
     --text-selection: hsla(var(--accent-h), 50%, 5s0%, 20%);
 
     --link-color: var(--color-accent-1);
-    --link-color-hover: var(--color-accent-2);  
+    --link-color-hover: var(--color-accent-2);
     --link-unresolved-opacity: 0.8;
 
 
     --icon-color: rgb(100, 100, 100);
-    --icon-color-hover: var(--color-accent-2); /*brithter*/
-    --icon-color-focused: var(--color-accent-1); /*darker*/
+    --icon-color-hover: var(--color-accent-2);
+    /*brithter*/
+    --icon-color-focused: var(--color-accent-1);
+    /*darker*/
 
     --tab-text-color-focused-active-current: var(--color-accent-1);
 
-    --background-modifier-hover: rgba(0, 0, 0,0);
+    --background-modifier-hover: rgba(0, 0, 0, 0);
 
     --pre-code: #f0eeee;
     --code-block: #000000;
-    --inline-code: var(--light-green) ;
-    
+    --inline-code: var(--light-green);
+
 
     --vim-cursor: var(--color-accent);
 
     --scrollbar-bg: var(--color-accent);
     --scrollbar-active-thumb-bg: var(--color-accent-1);
-    --scrollbar-thumb-bg: var(--color-accent);    
-	--tab-radius-active: 0px;
+    --scrollbar-thumb-bg: var(--color-accent);
+    --tab-radius-active: 0px;
 }
 
 
@@ -300,8 +297,10 @@ em,
     color: var(--text-highlight-italic) !important;
 }
 
-.cm-highlight {
-    color: var(--text-mark) !important;
+.cm-highlight,
+.markdown-rendered mark {
+    color: var(--background-primary) !important;
+    /* background-color: var(--text-highlight-bg) !important; */
 }
 
 del,
@@ -320,8 +319,10 @@ a:hover,
     text-decoration: none !important;
 }
 
-mark {
-    background-color: var(--text-highlight-bg) !important;
+/*Footnotes*/
+.cm-s-obsidian span.cm-footref,
+.cm-s-obsidian span.cm-blockid {
+    color: var(--color-accent);
 }
 
 
@@ -331,14 +332,14 @@ mark {
 /* - Blockquote */
 
 /* - Callout */
-.callout{
+.callout {
     border-top-width: 8px;
 
-    overflow: visible; 
+    overflow: visible;
     --callout-border-width: 1px;
     --callout-border-opacity: 0.7;
     --callout-blend-mode: normal;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
 
 }
 
@@ -354,7 +355,7 @@ mark {
 }
 
 
-.callout-title-inner ol{
+.callout-title-inner ol {
     margin: 0px;
     padding: 0 0.2em 0 0.8em;
 }
@@ -368,7 +369,7 @@ mark {
     padding-top: 12px;
 }
 
-.callout-title-inner > ol > li::marker{
+.callout-title-inner>ol>li::marker {
     color: var(--callout-color)
 }
 
@@ -417,11 +418,11 @@ body.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
 }
 
 .workspace-ribbon-collapse-btn:hover {
-    color: var(--light-main-green-dim);
+    color: var(--color-dark-main-green-dim);
 }
 
 .markdown-embed-title {
-    font-weight: 600 !important;
+    font-weight: 800 !important;
 }
 
 .markdown-embed {
@@ -433,42 +434,42 @@ body.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
 
 .cm-header-1,
 .markdown-preview-section h1 {
-    font-weight: 800 !important;
+    font-weight: 800;
     font-size: 30px !important;
     color: var(--text-title-h1) !important;
 }
 
 .cm-header-2,
 .markdown-preview-section h2 {
-    font-weight: 700 !important;
+    font-weight: 700;
     font-size: 22px !important;
     color: var(--text-title-h2) !important;
 }
 
 .cm-header-3,
 .markdown-preview-section h3 {
-    font-weight: 600 !important;
+    font-weight: 600;
     font-size: 20px !important;
     color: var(--text-title-h3) !important;
 }
 
 .cm-header-4,
 .markdown-preview-section h4 {
-    font-weight: 500 !important;
+    font-weight: 500;
     font-size: 18px !important;
     color: var(--text-title-h4) !important;
 }
 
 .cm-header-5,
 .markdown-preview-section h5 {
-    font-weight: 500 !important;
+    font-weight: 500;
     font-size: 18px !important;
     color: var(--text-title-h5) !important;
 }
 
 .cm-header-6,
 .markdown-preview-section h6 {
-    font-weight: 500 !important;
+    font-weight: 400;
     font-size: 18px !important;
     color: var(--text-title-h6) !important;
 }
@@ -481,29 +482,32 @@ body.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
 /* - List */
 
 /* [0-5] Progress */
-  
+
 
 @keyframes checkbox-progress-transition {
-    from { width: calc(var(--checkbox-progress-width) * (var(--progress-frac) - var(--checkbox-progress-unit-frac))) }
-    to { width: calc(var(--checkbox-progress-width) * var(--progress-frac)) }
+    from {
+        width: calc(var(--checkbox-progress-width) * (var(--progress-frac) - var(--checkbox-progress-unit-frac)))
+    }
+
+    to {
+        width: calc(var(--checkbox-progress-width) * var(--progress-frac))
+    }
 }
 
-input.task-list-item-checkbox:is(
-    [data-task="0"],
+input.task-list-item-checkbox:is([data-task="0"],
     [data-task="1"],
     [data-task="2"],
     [data-task="3"],
     [data-task="4"],
-    [data-task="5"]
-) {
+    [data-task="5"]) {
     width: var(--checkbox-progress-width);
     border-radius: var(--checkbox-radius);
     background: var(--checkbox-progress-background);
     border: var(--checkbox-progress-border-width) solid var(--color-accent);
     height: var(--checkbox-progress-height);
-    transition: border var(--checkbox-progress-animation-time); 
-    
-     &:hover {
+    transition: border var(--checkbox-progress-animation-time);
+
+    &:hover {
         background: var(--checkbox-progress-background);
     }
 
@@ -516,7 +520,8 @@ input.task-list-item-checkbox:is(
         height: 100%;
         border-radius: var(--checkbox-radius);
         -webkit-mask-image: none;
-        mask-image: none; /* vsc is not happy since -webkit-mask-image is not cross-platform even though this does nothing */
+        mask-image: none;
+        /* vsc is not happy since -webkit-mask-image is not cross-platform even though this does nothing */
     }
 }
 
@@ -552,38 +557,37 @@ input.task-list-item-checkbox[data-task="5"] {
 /*reading view*/
 
 
-.task-list-item:is(
-    [data-task="0"],
+.task-list-item:is([data-task="0"],
     [data-task="1"],
     [data-task="2"],
     [data-task="3"],
     [data-task="4"],
-    [data-task="5"]
-) {
-    .task-list-item-checkbox{
-    width: var(--checkbox-progress-width);
-    border-radius: var(--checkbox-radius);
-    background: var(--checkbox-progress-background);
-    border: var(--checkbox-progress-border-width) solid var(--interactive-accent);
-    height: var(--checkbox-progress-height);
-    transition: border var(--checkbox-progress-animation-time); 
-    
-     &:hover {
-        background: var(--checkbox-progress-background);
-    }
-
-    &::after {
-        width: calc(var(--checkbox-progress-width) * var(--progress-frac));
-        animation-name: checkbox-progress-transition;
-        animation-duration: var(--checkbox-progress-animation-time);
-        background: var(--interactive-accent) !important;
-        margin-top: 1px;
-        height: 100%;
+    [data-task="5"]) {
+    .task-list-item-checkbox {
+        width: var(--checkbox-progress-width);
         border-radius: var(--checkbox-radius);
-        -webkit-mask-image: none;
-        mask-image: none; /* vsc is not happy since -webkit-mask-image is not cross-platform even though this does nothing */
+        background: var(--checkbox-progress-background);
+        border: var(--checkbox-progress-border-width) solid var(--interactive-accent);
+        height: var(--checkbox-progress-height);
+        transition: border var(--checkbox-progress-animation-time);
+
+        &:hover {
+            background: var(--checkbox-progress-background);
+        }
+
+        &::after {
+            width: calc(var(--checkbox-progress-width) * var(--progress-frac));
+            animation-name: checkbox-progress-transition;
+            animation-duration: var(--checkbox-progress-animation-time);
+            background: var(--interactive-accent) !important;
+            margin-top: 1px;
+            height: 100%;
+            border-radius: var(--checkbox-radius);
+            -webkit-mask-image: none;
+            mask-image: none;
+            /* vsc is not happy since -webkit-mask-image is not cross-platform even though this does nothing */
+        }
     }
-}
 }
 
 
@@ -596,6 +600,7 @@ input.task-list-item-checkbox[data-task="5"] {
 .task-list-item[data-task="0"] {
     --progress-frac: 0;
 }
+
 .task-list-item[data-task="1"] {
     --progress-frac: 0.2;
 }
@@ -624,47 +629,40 @@ input.task-list-item-checkbox[data-task="5"] {
 
 
 
-td{
-    border: 0 !important; 
+td {
+    border: 0 !important;
     border-top: 0 !important;
     border-left: 0 !important;
     border-right: 0 !important;
     /* padding: 4px, 6px; */
-} 
+}
 
-th{
+th {
     font-weight: 600 !important;
     border-top: 0 !important;
     border-left: 0 !important;
     border-right: 0 !important;
-    border-bottom: 2px solid var(--table-header-border-color) !important; 
-} 
+    border-bottom: 2px solid var(--table-header-border-color) !important;
+}
 
 tr {
-    border-bottom: 0.5px solid  hsla(var(--accent-h), var(--accent-s), var(--accent-l), 50%) !important;
+    border-bottom: 0.5px solid hsla(var(--accent-h), var(--accent-s), var(--accent-l), 50%) !important;
 
 }
 
 
 
-
-tr:nth-child(2n) {
-    /* background-color: #85ffc210; */
-    /* background-color: #f70909; */
-
-}
-
-tbody > tr:hover {
+tbody>tr:hover {
     /* background-color: var(--text-selection); */
     background-color: hsla(var(--accent-h), 50%, 20%, 10%) !important;
 
 }
 
-.table-view-table > tbody > tr{
+.table-view-table>tbody>tr {
     background-color: var(--background-primary) !important;
 }
 
-.table-view-table > tbody > tr:hover{
+.table-view-table>tbody>tr:hover {
     background-color: hsla(var(--accent-h), 50%, 20%, 10%) !important;
 }
 
@@ -684,11 +682,11 @@ tbody > tr:hover {
 
 
 /* Window */
-.workspace-split.mod-root .view-content{
+.workspace-split.mod-root .view-content {
     background-color: var(--background-primary);
 }
 
-.view-header{
+.view-header {
     background-color: var(--background-primary);
 }
 
@@ -698,31 +696,37 @@ tbody > tr:hover {
     width: 8px !important;
 }
 
+/* Suggestion */
+
+.suggestion-item.is-selected {
+    background-color: var(--nav-item-background-selected);
+}
+
 
 /* Divider */
 
-.workspace-leaf-resize-handle{
-	border-width: 0.1px;
-	border-color: var(--background-modifier-border);
+.workspace-leaf-resize-handle {
+    border-width: 0.1px;
+    border-color: var(--background-modifier-border);
 
 }
 
 
-.workspace-ribbon{
-	border-radius: 0px;
-	border-width: 0.1px;
-	border-color: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+.workspace-ribbon {
+    border-radius: 0px;
+    border-width: 0.1px;
+    border-color: var(--background-modifier-border);
 }
 
 
-.workspace-ribbon.mod-left:before{
-	border-radius: 0.1px;
-	border-bottom: solid var(--color-accent) 0.5px
+.workspace-ribbon.mod-left:before {
+    border-radius: 0.1px;
+    border-bottom: solid var(--background-modifier-border) 0.5px
 }
 
 
 
-.workspace-tab-header{
+.workspace-tab-header {
     border-radius: 0;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -732,7 +736,7 @@ tbody > tr:hover {
     background-color: var(--background-secondary);
     box-shadow: inset 0px 4px 0px 0px var(--tab-outline-color);
     transition: box-shadow 0.4s ease-in-out;
-} 
+}
 
 .workspace-tab-header {
     margin: 0px 2px;
@@ -740,16 +744,16 @@ tbody > tr:hover {
     background-color: var(--background-secondary);
     box-shadow: inset 0px 0.5px 0px 0px var(--tab-outline-color);
     transition: box-shadow 0.4s ease-in-out;
-} 
-
-
-.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon{
-    color: rgb(136, 136, 136); /*icon in stacked view*/
-
 }
 
+/*icon in stacked view*/
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon {
+    color: var(--color-dark-interactive);
+}
+
+/*Filetitle in stacked view*/
 .mod-root .workspace-tabs.mod-stacked .workspace-tab-header {
-    color: rgb(136, 136, 136); /*Filetitle in stacked view*/
+    color: var(--color-dark-interactive);
 }
 
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
@@ -758,59 +762,58 @@ tbody > tr:hover {
 
 
 .mod-root .workspace-tabs.mod-stacked .workspace-tab-header.is-active.mod-active {
-    color: var(--color-accent);
-    border-left: 2px solid var(--color-accent);
+    color: var(--background-modifier-border);
+    box-shadow: none;
+    border-left: 1px solid var(--background-modifier-border);
     transition: border 0.2s ease-in-out;
-
 }
 
-.workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header{
+.workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
     margin: 0;
 }
 
 .workspace-tab-header.is-active .workspace-tab-header-inner-close-button {
-    color: var(--color-accent-1);
+    color: var(--icon-color);
 }
 
 .workspace-tab-header.is-active .workspace-tab-header-inner-close-button:hover {
-    color: var(--color-accent-2);
+    color: var(--icon-color-hover);
 }
 
 .mod-root .workspace-tabs.mod-stacked .workspace-tab-header.is-active.mod-active .workspace-tab-header-inner-close-button,
 .mod-root .workspace-tabs.mod-stacked .workspace-tab-header.is-active.mod-active .workspace-tab-header-inner-icon svg,
 .workspace-tabs.mod-stacked .workspace-tab-header.is-active.mod-active .workspace-tab-header-inner-title {
-    color: var(--color-accent-1);
+    color: var(--icon-color-active);
 }
 
 
-.mod-root .workspace-tab-header-container-inner{
+.mod-root .workspace-tab-header-container-inner {
     padding: 0px;
     margin: 4px 0px calc(var(--tab-outline-width) * -0.2)
 }
 
 
-.workspace .mod-root .workspace-tabs.mod-stacked 
-.workspace-tab-container .workspace-tab-header {
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
     background-color: var(--background-primary);
     width: 25px;
 }
 
-.workspace-tab-header-container{
+.workspace-tab-header-container {
     border-bottom-width: 0.1px;
     border-color: var(--background-modifier-border);
 }
-   
+
 .workspace-split.mod-root .workspace-tab-header.is-active::before,
-.workspace-split.mod-root .workspace-tab-header.is-active::after{
+.workspace-split.mod-root .workspace-tab-header.is-active::after {
     box-shadow: none;
 }
 
-.workspace-tab-header-inner{
+.workspace-tab-header-inner {
     border-radius: 0px;
 }
 
 .mod-right-split,
-.mod-left-split{
+.mod-left-split {
     border-radius: 0px;
 }
 
@@ -822,17 +825,21 @@ tbody > tr:hover {
 .mod-left-split .workspace-tab-header:hover,
 .mod-left-split .workspace-tab-header.is-active:hover,
 .mod-right-split .workspace-tab-header:hover,
-.mod-right-split .workspace-tab-header.is-active:hover{
-    background-color: transparent;
-
-}
- 
-.workspace-tab-header-inner-icon{
-    color: gray;
+.mod-right-split .workspace-tab-header.is-active:hover {
+    background-color: none;
 }
 
-.workspace .mod-root .workspace-tab-header{
+.workspace-tab-header-inner-icon {
+    color: var(--color-dark-interactive);
+}
+
+.workspace .mod-root .workspace-tab-header {
     padding: 0px;
+}
+
+
+.search-result-file-match:hover {
+    background-color: var(--nav-item-background-selected);
 }
 
 /*File nav*/
@@ -849,25 +856,25 @@ tbody > tr:hover {
 
 
 .nav-file-title.is-active {
-    padding-left: 3px; 
+    padding-left: 3px;
     border-left: 5px solid var(--interactive-accent);
-    background-color: var(--interactive-before);
-    transition: border 0.3s ease-in-out;
+    transition: border 0.3s ease-in;
+    transition: background-color 0.3s ease-in;
+
 }
 
 .nav-file-title.is-active:hover {
-    border-left: 5px solid var(--interactive-accent);
-    background-color: var(--interactive-after);
+    border-left: 5px solid var(--interactive-accent-hover);
 }
 
 
 
 /*Icons*/
 /*Properties */
-.metadata-property-icon{
-    color: var(--color-accent);
+.metadata-property-icon {
+    color: var(--icon-color-active);
 }
 
-.metadata-property-icon:hover{
-    color: var(--color-accent-1);
+.metadata-property-icon:hover {
+    color: var(--icon-color-hover);
 }
