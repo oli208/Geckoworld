@@ -652,13 +652,6 @@ tr {
 
 
 
-
-tr:nth-child(2n) {
-    /* background-color: #85ffc210; */
-    /* background-color: #f70909; */
-
-}
-
 tbody>tr:hover {
     /* background-color: var(--text-selection); */
     background-color: hsla(var(--accent-h), 50%, 20%, 10%) !important;
@@ -753,16 +746,14 @@ tbody>tr:hover {
     transition: box-shadow 0.4s ease-in-out;
 }
 
-
+/*icon in stacked view*/
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon {
     color: var(--color-dark-interactive);
-    /*icon in stacked view*/
-
 }
 
+/*Filetitle in stacked view*/
 .mod-root .workspace-tabs.mod-stacked .workspace-tab-header {
     color: var(--color-dark-interactive);
-    /*Filetitle in stacked view*/
 }
 
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
