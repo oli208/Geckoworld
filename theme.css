@@ -782,7 +782,7 @@ tbody>tr:hover {
 .mod-root .workspace-tabs.mod-stacked .workspace-tab-header.is-active.mod-active {
     color: var(--background-modifier-border);
     box-shadow: none;
-    border-left: 1px solid var(--background-modifier-border);
+    border-left: 2px solid var(--background-modifier-border);
     transition: border 0.2s ease-in-out;
 }
 
