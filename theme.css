@@ -131,14 +131,22 @@ Window
 
 
     /* 2.2 Light theme color variables */
-    --bg-light: #ffffff;
-    --grey1-light: #939f91;
+    --color-light-green-main: #2c7845;
+    --color-light-green-dim: #2c623f;
+    --color-light-green-light: #579a6e;
+    --color-light-green-dark: #1b3a25;
+    --color-light-green-trans: #2f674233;
 
-    --light-main-green: #4ba862;
-    --light-main-green-dim: #64bb90;
-    --light-main-green-trans: #16af6215;
+    --color-light-lime: #5E8B48;
+    --color-light-yellow: #B39E4F;
+    --color-light-orange: #CA7337;
+    --color-light-red: #B25555;
+    --color-light-purple: #795994;
 
-    --light-green: #899c40;
+    --color-light-fg: #000000;
+    --color-light-bg: #f0f0f0;
+
+    --color-light-interactive: #3c3c3c;
 }
 
 /* 2.3 Dark theme implementation */
@@ -218,60 +226,77 @@ Window
 
 /* 2.4 Light theme implementation */
 .theme-light {
-    --background-primary: var(--bg-light);
-    --background-secondary: var(--bg-light);
-    --background-modifier-border: var(--color-accent);
-
-    --ribbon-background: var(--bg-light);
-    --ribbon-background-collapsed: var(--bg-light);
-
-
-    --text-normal: #000000;
-    --text-faint: var(--grey1-light);
-    --text-title-h1: #f85552;
-    --text-title-h2: #ee7925;
-    --text-title-h3: #38a331;
-    --text-title-h4: #0f8a6b;
-    --text-title-h5: #4190d1;
-    --text-title-h6: #8540b3;
-
-    --text-a: var(--color-accent);
-    --text-a-hover: var(--color-accent-1);
-    --text-selection: var(--color-accent);
-    --text-accent: var(--color-accent);
-
-    --text-highlight-bg: hsla(var(--accent-h), 80%, 80%, 30%);
-    --text-highlight-bold: var(--color-accent-1);
-    --text-highlight-italic: var(--color-accent-1);
-    --text-highlight-crossedout: var(--color-red);
-    --text-selection: hsla(var(--accent-h), 50%, 5s0%, 20%);
-
-    --link-color: var(--color-accent-1);
-    --link-color-hover: var(--color-accent-2);
-    --link-unresolved-opacity: 0.8;
-
-
-    --icon-color: rgb(100, 100, 100);
-    --icon-color-hover: var(--color-accent-2);
-    /*brithter*/
-    --icon-color-focused: var(--color-accent-1);
-    /*darker*/
-
-    --tab-text-color-focused-active-current: var(--color-accent-1);
-
+    --background-primary: var(--color-light-bg);
+    --background-secondary: var(--color-light-bg);
+    --background-secondary-alt: var(--color-light-bg);
+    --background-modifier-border: var(--color-light-green-main);
     --background-modifier-hover: rgba(0, 0, 0, 0);
 
-    --pre-code: #f0eeee;
-    --code-block: #000000;
-    --inline-code: var(--light-green);
+    --ribbon-background: var(--color-light-bg);
+    --ribbon-background-collapsed: var(--color-light-bg);
 
+    --interactive-accent: var(--color-light-green-main);
+    --interactive-accent-hover: var(--color-light-green-dim);
 
-    --vim-cursor: var(--color-accent);
+    --tab-text-color-focused-active-current: var(--color-light-green-dark);
 
-    --scrollbar-bg: var(--color-accent);
-    --scrollbar-active-thumb-bg: var(--color-accent-1);
-    --scrollbar-thumb-bg: var(--color-accent);
+    --inline-title-color: var(--color-light-green-main);
+    --text-title-h1: var(--color-light-green-main);
+    --text-title-h2: var(--color-light-lime);
+    --text-title-h3: var(--color-light-yellow);
+    --text-title-h4: var(--color-light-orange);
+    --text-title-h5: var(--color-light-red);
+    --text-title-h6: var(--color-light-purple);
+    --text-accent: var(--color-light-green-main);
+
+    --text-normal: var(--color-light-fg);
+    --text-faint: var(--color-light-green-light);
+
+    --code-block: var(--color-light-fg);
+
+    --inline-title-weight: 800;
+    --text-highlight-bg: hsla(var(--accent-h), 95%, 65%, 50%);
+    --text-highlight-fg: var(--text-normal);
+    --text-highlight-bold: var(--color-accent);
+    --text-highlight-italic: var(--color-accent);
+    --text-highlight-crossedout: var(--color-light-red);
+    
+    --text-mark: var(--color-light-green-trans);
+    --text-selection: hsla(var(--accent-h), 50%, 30%, 50%);
+    --hr-color: var(--color-accent);
+
+    --link-color: var(--color-accent);
+    --link-color-hover: var(--color-accent-1);
+    --link-external-color: var(--color-accent);
+    --link-unresolved-color: var(--color-accent);
+    --link-unresolved-opacity: 0.7;
+
+    --icon-color: var(--color-light-interactive);
+    --icon-color-hover: var(--color-light-green-dim);
+    --icon-color-active: var(--color-light-green-main);
+    --icon-color-focused: var(--color-light-green-main);
+
+    --tab-outline-color: var(--color-light-green-main);
+    --tab-text-color-focused-active-current: var(--color-light-green-main);
     --tab-radius-active: 0px;
+
+    --nav-item-color-hover: var(--color-light-green-dark);
+    --nav-item-color-highlighted: var(--color-light-green-dark);
+    --nav-item-background-active: var(--color-light-green-trans);
+    --nav-item-background-selected: var(--color-light-green-trans);
+
+    --scrollbar-bg: var(--color-light-green-main);
+    --scrollbar-active-thumb-bg: var(--color-light-green-main);
+    --scrollbar-thumb-bg: var(--color-light-green-main);
+
+    --table-header-border-color: var(--color-accent);
+    --checkbox-color: var(--color-accent);
+    --checkbox-color-hover: var(--color-accent-1);
+    --checkbox-border-color: var(--color-accent);
+    --list-marker-color: var(--color-accent);
+    --vim-cursor: var(--color-dark-green-main);
+
+    --callout-radius: 0px;
 }
 
 
