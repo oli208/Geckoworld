@@ -766,12 +766,12 @@ tbody>tr:hover {
 
 /*icon in stacked view*/
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon {
-    color: var(--color-dark-interactive);
+    color: var(--text-muted);
 }
 
 /*Filetitle in stacked view*/
 .mod-root .workspace-tabs.mod-stacked .workspace-tab-header {
-    color: var(--color-dark-interactive);
+    color: var(--text-muted);
 }
 
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
@@ -848,7 +848,7 @@ tbody>tr:hover {
 }
 
 .workspace-tab-header-inner-icon {
-    color: var(--color-dark-interactive);
+    color: var(--text-muted);
 }
 
 .workspace .mod-root .workspace-tab-header {
