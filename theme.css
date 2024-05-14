@@ -181,7 +181,6 @@ Window
     --code-block: var(--color-dark-fg);
 
     --inline-title-weight: 800;
-    --text-highlight-bg: hsla(var(--accent-h), 95%, 75%, 80%);
     --text-highlight-bold: var(--color-accent);
     --text-highlight-italic: var(--color-accent);
     --text-highlight-crossedout: var(--color-dark-red);
@@ -255,7 +254,6 @@ Window
     --code-block: var(--color-light-fg);
 
     --inline-title-weight: 800;
-    --text-highlight-bg: hsla(var(--accent-h), 95%, 65%, 50%);
     --text-highlight-fg: var(--text-normal);
     --text-highlight-bold: var(--color-accent);
     --text-highlight-italic: var(--color-accent);
@@ -321,12 +319,6 @@ strong,
 em,
 .cm-em {
     color: var(--text-highlight-italic) !important;
-}
-
-.cm-highlight,
-.markdown-rendered mark {
-    color: var(--background-primary) !important;
-    /* background-color: var(--text-highlight-bg) !important; */
 }
 
 del,
