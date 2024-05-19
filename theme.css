@@ -443,12 +443,7 @@ body.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
     font-weight: 800 !important;
 }
 
-.markdown-embed {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-    margin-left: 10px !important;
-    margin-right: 10px !important;
-}
+
 
 .cm-header-1,
 .markdown-preview-section h1 {
