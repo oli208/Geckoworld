@@ -696,6 +696,12 @@ tbody>tr:hover {
     padding-top: 0px !important;
 }
 
+/* Canvas */
+
+.canvas-node-container {
+    border-radius: 0px;
+}
+
 
 
 
