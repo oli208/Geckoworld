@@ -209,6 +209,13 @@ Window
     --nav-item-background-active: var(--color-dark-green-trans);
     --nav-item-background-selected: var(--color-dark-green-trans);
 
+    --canvas-color-1: 77, 117, 90;
+    --canvas-color-2: 179, 158, 79;
+    --canvas-color-3: 202, 115, 55;
+    --canvas-color-4: 178, 85, 85;
+    --canvas-color-5: 121, 89, 148; 
+    --canvas-color-6: 64, 94, 171;
+
     --scrollbar-bg: var(--color-dark-green-main);
     --scrollbar-active-thumb-bg: var(--color-dark-green-main);
     --scrollbar-thumb-bg: var(--color-dark-green-main);
@@ -282,6 +289,13 @@ Window
     --nav-item-color-highlighted: var(--color-light-green-dark);
     --nav-item-background-active: var(--color-light-green-trans);
     --nav-item-background-selected: var(--color-light-green-trans);
+
+    --canvas-color-1: 77, 117, 90;
+    --canvas-color-2: 179, 158, 79;
+    --canvas-color-3: 202, 115, 55;
+    --canvas-color-4: 178, 85, 85;
+    --canvas-color-5: 121, 89, 148; 
+    --canvas-color-6: 64, 94, 171;
 
     --scrollbar-bg: var(--color-light-green-main);
     --scrollbar-active-thumb-bg: var(--color-light-green-main);
